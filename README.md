@@ -9,11 +9,17 @@ Basic programming experience is assumed.
 Familiarity with Lua and Love2D is beneficial but not necessary.
 Some non-obvious Lua idioms and briefly explained.
 
+Each step can be run with `love` interpreter by issuing a `love` 
+command followed by a folder name, for example
+
+    cd /your-path/love2d_arkanoid_tutorial
+    love 01_TheBallTheBrickThePlatform 
+
 One last thing before we start: feedback is crucial.
 If you have any critique, suggestions, improvements or just any other ideas, let me know. 
 
 An explanation of each step can be found on
-[github wiki](https://github.com/noooway/love2d_arkanoid_tutorial/wiki)
+[github wiki](https://github.com/noooway/love2d_arkanoid_tutorial/wiki).
 
 Contents:
 
