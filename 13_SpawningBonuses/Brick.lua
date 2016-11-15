@@ -27,6 +27,7 @@ function Brick:new( o )
    o.width = o.width or brick_tile_width
    o.height = o.height or brick_tile_height
    o.bricktype = o.bricktype or 11
+   o.bonustype = o.bonustype or nil
    o.collider = o.collider or {}
    o.collider_shape = o.collider:rectangle( o.position.x,
 					    o.position.y,
@@ -59,12 +60,21 @@ function Brick:react_on_ball_collision(	another_shape, separating_vector )
    local dx, dy = separating_vector.x, separating_vector.y
    if ( math.abs( dx ) > big_enough_overlap ) or
       ( math.abs( dy ) > big_enough_overlap ) then
-	 self.to_destroy = true
+	 if self:is_simple() then
+	    self.to_destroy = true
+	 elseif self:is_armored() then
+	    self:armored_to_scrathed()
+	 elseif self:is_scratched() then
+	    self:scrathed_to_cracked()
+	 elseif self:is_cracked() then
+	    self.to_destroy = true
+	 elseif self:is_heavyarmored() then
+	 end
    end
 end
 
 function Brick:bricktype_to_quad()
-   if self.bricktype == nil or self.bricktype <= 10 then
+   if self.bricktype == nil or self.bricktype < 10 then
       return nil
    end
    local row = math.floor( self.bricktype / 10 )
@@ -76,5 +86,40 @@ function Brick:bricktype_to_quad()
                                  tileset_width, tileset_height )
 end
 
+function Brick:is_simple()
+   local row = math.floor( self.bricktype / 10 )
+   return ( row == 1 )
+end
 
+function Brick:is_armored()
+   local row = math.floor( self.bricktype / 10 )
+   return ( row == 2 )
+end
+
+function Brick:is_scratched()
+   local row = math.floor( self.bricktype / 10 )
+   return ( row == 3 )
+end
+
+function Brick:is_cracked()
+   local row = math.floor( self.bricktype / 10 )
+   return ( row == 4 )
+end
+
+function Brick:is_heavyarmored()
+   local row = math.floor( self.bricktype / 10 )
+   return ( row == 5 )
+end
+
+function Brick:armored_to_scrathed()
+   self.bricktype = self.bricktype + 10
+   self.quad = self:bricktype_to_quad()
+end
+
+function Brick:scrathed_to_cracked()
+   self.bricktype = self.bricktype + 10
+   self.quad = self:bricktype_to_quad()
+end
+
+      
 return Brick

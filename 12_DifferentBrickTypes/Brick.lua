@@ -73,7 +73,7 @@ function Brick:react_on_ball_collision(	another_shape, separating_vector )
 end
 
 function Brick:bricktype_to_quad()
-   if self.bricktype == nil or self.bricktype < 10 then
+   if self.bricktype == nil or self.bricktype <= 10 then
       return nil
    end
    local row = math.floor( self.bricktype / 10 )
