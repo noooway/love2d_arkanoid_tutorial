@@ -73,12 +73,6 @@ function Ball:draw()
    		       self.position.y - self.radius )
 end
 
-function Ball:keyreleased( key, scancode, platform )
-   if key == ' ' then
-      self:launch_from_platform( platform )
-   end
-end
-
 function Ball:follow_platform( platform )   
    local platform_center = vector( platform.position.x + platform.width / 2,
 				   platform.position.y + platform.height / 2 )
@@ -118,7 +112,16 @@ end
 function Ball:react_on_platform_collision( another_shape, separating_vector )
    self.position = self.position + separating_vector
    self.collider_shape:moveTo( self.position:unpack() )
-   self:platform_rebound( another_shape, separating_vector )
+   if not another_shape.game_object.sticky then
+      self:platform_rebound( another_shape, separating_vector )
+   else
+      self.stuck_to_platform = true
+      self.platform_launch_speed_magnitude = self.speed:len()
+      self.speed = vector( 0, 0 )
+      local platform_center = vector( another_shape:center() )
+      local ball_center = vector( self.collider_shape:center() )
+      self.separation_from_platform_center = ball_center - platform_center
+   end
    self:increase_collision_counter()
    self:increase_speed_after_collision()
 end
