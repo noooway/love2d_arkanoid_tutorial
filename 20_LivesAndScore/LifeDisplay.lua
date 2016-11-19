@@ -43,7 +43,6 @@ function LifeDisplay:draw()
 end
 
 function LifeDisplay:add_life_if_score_reached( score )
-   print( score )
    local score_milestone = (self.lives_added_from_score + 1) * 3000
    if score >= score_milestone then
       self:add_new_life()
