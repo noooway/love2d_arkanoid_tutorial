@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg5813"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="platform.svg"
+   inkscape:export-filename="/home/noway/progs/lua/love/arcanoid/img/800x600/platform_ball_and_walls.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs5815">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3833">
+      <stop
+         style="stop-color:#19c81c;stop-opacity:1;"
+         offset="0"
+         id="stop3835" />
+      <stop
+         style="stop-color:#19c81c;stop-opacity:0;"
+         offset="1"
+         id="stop3837" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3790">
+      <stop
+         id="stop3792"
+         offset="0"
+         style="stop-color:#00f600;stop-opacity:1;" />
+      <stop
+         id="stop3794"
+         offset="1"
+         style="stop-color:#e6e6e6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient27796"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3033852,0,0,1,1934.2263,-868.10584)"
+       x1="161.18062"
+       y1="2769.5254"
+       x2="185.82802"
+       y2="2990.6797" />
+    <linearGradient
+       id="linearGradient9873">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop9875" />
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1"
+         offset="1"
+         id="stop9877" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient27798"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.69192041,0,0,1,2214.5186,-1356.37)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       y2="2956.6797"
+       x2="195.03481"
+       y1="2810.5254"
+       x1="174.22357"
+       gradientTransform="translate(2073.2786,-1116.7434)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5772"
+       xlink:href="#linearGradient9873"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="2956.6797"
+       x2="195.03481"
+       y1="2810.5254"
+       x1="174.22357"
+       gradientTransform="translate(2073.2786,-1116.7434)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5853"
+       xlink:href="#linearGradient9873"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient5897"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.18537281,0,0,0.18487179,22.579888,-495.99794)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient5900"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.12825893,0,0,0.18640392,15.677799,-532.43996)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient5903"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.24161713,0,0,0.18359118,29.367389,-460.28498)"
+       x1="161.18062"
+       y1="2769.5254"
+       x2="185.82802"
+       y2="2990.6797" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4944"
+       id="radialGradient9989"
+       cx="-4.8770485"
+       cy="3243.2385"
+       fx="-4.8770485"
+       fy="3243.2385"
+       r="43.926407"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.36844864,-2.0091907,1.8389636,0.33723201,-5942.6759,2139.9418)" />
+    <linearGradient
+       id="linearGradient4944"
+       inkscape:collect="always">
+      <stop
+         id="stop4946"
+         offset="0"
+         style="stop-color:#e1dbdb;stop-opacity:1" />
+      <stop
+         id="stop4948"
+         offset="1"
+         style="stop-color:#fbfbfb;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       r="43.926407"
+       fy="3243.2385"
+       fx="-4.8770485"
+       cy="3243.2385"
+       cx="-4.8770485"
+       gradientTransform="matrix(0.36844864,-2.0091907,1.8389636,0.33723201,-5942.6759,2139.9418)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient5920"
+       xlink:href="#linearGradient4944"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3790"
+       id="linearGradient3008"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.12825893,0,0,0.18640392,207.67781,-532.43996)"
+       x1="185.5802"
+       y1="2845.9272"
+       x2="185.84627"
+       y2="2898.198" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient3012"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.18537281,0,0,0.18487179,214.57989,-495.99794)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient3016"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.24161713,0,0,0.18359118,221.36739,-460.28498)"
+       x1="161.18062"
+       y1="2769.5254"
+       x2="185.82802"
+       y2="2990.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient3798"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.12825893,0,0,0.18640392,207.6778,-532.43996)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient3804"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.12825893,0,0,0.1198912,207.6778,-342.34036)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9873"
+       id="linearGradient3810"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.12825893,0,0,0.18640392,207.6778,-532.43996)"
+       x1="174.22357"
+       y1="2810.5254"
+       x2="195.03481"
+       y2="2956.6797" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3833"
+       id="linearGradient3839"
+       x1="229.34375"
+       y1="0.28523079"
+       x2="229.34375"
+       y2="11.431065"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3833"
+       id="linearGradient3843"
+       gradientUnits="userSpaceOnUse"
+       x1="229.34375"
+       y1="0.28523079"
+       x2="229.34375"
+       y2="11.431065"
+       gradientTransform="matrix(1.4813919,0,0,1,-92.652898,32)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3833"
+       id="linearGradient3847"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.9334735,0,0,1,-179.72806,64)"
+       x1="229.34375"
+       y1="0.28523079"
+       x2="229.34375"
+       y2="11.431065" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4"
+     inkscape:cx="173.10245"
+     inkscape:cy="566.65351"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:snap-global="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:snap-nodes="false"
+     inkscape:snap-grids="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5894"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="0px"
+       spacingx="64px"
+       spacingy="32px"
+       originy="-8px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5818">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       ry="7.5640984"
+       y="64.435898"
+       x="0.43590173"
+       height="15.128197"
+       width="139.50398"
+       id="rect27649"
+       style="fill:url(#linearGradient5903);fill-opacity:1;stroke:#000000;stroke-width:0.87180346;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       ry="7.679985"
+       y="0.32001495"
+       x="0.32001486"
+       height="15.35997"
+       width="74.05365"
+       id="rect27651"
+       style="fill:url(#linearGradient5900);fill-opacity:1;stroke:#000000;stroke-width:0.64002973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       ry="7.6168604"
+       y="32.383137"
+       x="0.3831397"
+       height="15.233721"
+       width="107.02985"
+       id="rect27653"
+       style="fill:url(#linearGradient5897);fill-opacity:1;stroke:#000000;stroke-width:0.7662794;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       style="fill:url(#linearGradient3012);fill-opacity:1;stroke:#000000;stroke-width:0.7662794;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3010"
+       width="107.02985"
+       height="15.233721"
+       x="192.38313"
+       y="32.383137"
+       ry="7.6168604"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <rect
+       inkscape:export-ydpi="100"
+       inkscape:export-xdpi="100"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       style="fill:url(#linearGradient3016);fill-opacity:1;stroke:#000000;stroke-width:0.87180346;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3014"
+       width="139.50398"
+       height="15.128197"
+       x="192.4359"
+       y="64.435898"
+       ry="7.5640984" />
+    <rect
+       style="fill:url(#linearGradient3798);fill-opacity:1;stroke:#000000;stroke-width:0.64002973;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3796"
+       width="74.05365"
+       height="15.35997"
+       x="192.32001"
+       y="0.32001495"
+       ry="7.679985"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="fill:url(#linearGradient3839);fill-opacity:1;stroke:none"
+       d="m 200,0.5912953 c -3.72287,0 -6.81746,2.9318949 -7.53125,6.8566122 0.52985,2.4158725 2.45519,4.1979255 4.78125,4.1979255 l 64.1875,0 c 2.32543,0 4.25078,-1.783047 4.78125,-4.1979255 -0.71379,-3.9247173 -3.80838,-6.8566122 -7.53125,-6.8566122 l -58.6875,0 z"
+       id="rect3806"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3841"
+       d="m 203.62548,32.591295 c -5.51503,0 -9.55245,0.223563 -10.9484,6.726404 0.26408,2.493998 3.42877,4.328134 6.87457,4.328134 l 95.08685,0 c 3.44487,0 3.6929,-1.67888 4.47873,-4.093759 -0.69281,-4.028884 -3.03753,-6.960779 -8.55256,-6.960779 z"
+       style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
+       sodipodi:nodetypes="scsscss"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       sodipodi:nodetypes="scsscss"
+       style="fill:url(#linearGradient3847);fill-opacity:1;stroke:none"
+       d="m 206.96664,64.591295 c -7.19807,0 -13.06656,-0.557687 -14.28956,6.726404 0.34467,2.493998 4.47514,4.328134 8.97251,4.328134 l 124.10484,0 c 4.49615,0 4.81987,-1.67888 5.84552,-4.093759 -1.03445,-5.825759 -3.96451,-6.960779 -11.16258,-6.960779 z"
+       id="path3845"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/progs/lua/love/love2d_arkanoid_tutorial/11_BasicTiles/img/800x600/platform.png"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+  </g>
+</svg>
