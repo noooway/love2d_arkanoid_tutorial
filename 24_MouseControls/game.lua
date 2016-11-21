@@ -170,6 +170,10 @@ function game:keyreleased( key, code )
    end
 end
 
+function game:mousereleased( x, y, button, istouch )
+   balls_container:mousereleased( x, y, button, istouch, platform )
+end
+
 function game:leave()
    level_sequence = nil
    level_counter = nil
