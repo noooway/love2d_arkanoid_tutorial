@@ -61,5 +61,5 @@ Contents:
 25. [Details: Random Bonuses](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Details:-Random-Bonuses)
 26. [Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Sound)
 27. [Final Screen](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen)
-28. Game Over
-29. Packaging and Distribution 
+28. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
+29. [Packaging and Distribution](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution)
