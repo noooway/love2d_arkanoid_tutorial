@@ -9,13 +9,13 @@ end
 name = "level_sequence" 
 
 sequence = {
-   "test_all",
    "intro",
    "pcmn",
    "digger",
    "spaceship",   
    "pipeflower",
-   "spaceinv"
+   "spaceinv",
+   "test_all"
 }
 
 return level_sequence

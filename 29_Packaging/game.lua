@@ -139,7 +139,6 @@ function switch_to_next_level()
       else
 	 Gamestate.switch( game, { level_sequence = level_sequence,
 				   level_counter = level_counter,
-				   collider = collider,
 				   side_panel = side_panel } )
       end
    end
