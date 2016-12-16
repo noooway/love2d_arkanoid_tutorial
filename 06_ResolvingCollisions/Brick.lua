@@ -53,4 +53,9 @@ function Brick:react_on_ball_collision(	another_shape, separating_vector )
    end
 end
 
+function Brick:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
 return Brick

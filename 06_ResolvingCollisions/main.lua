@@ -33,21 +33,21 @@ function resolve_collisions( dt )
    local collisions = collider:collisions( platform.collider_shape )
    for another_shape, separating_vector in pairs( collisions ) do
       if another_shape.game_object.name == "wall" then
-	 platform:react_on_wall_collision( another_shape, separating_vector )
+         platform:react_on_wall_collision( another_shape, separating_vector )
       end
    end
    -- Ball
    local collisions = collider:collisions( ball.collider_shape )
    for another_shape, separating_vector in pairs( collisions ) do
       if another_shape.game_object.name == "wall" then
-	 ball:react_on_wall_collision( another_shape, separating_vector )
+         ball:react_on_wall_collision( another_shape, separating_vector )
       elseif another_shape.game_object.name == "platform" then
-	 ball:react_on_platform_collision( another_shape, separating_vector )
+         ball:react_on_platform_collision( another_shape, separating_vector )
       elseif another_shape.game_object.name == "brick" then
-	 ball:react_on_brick_collision( another_shape, separating_vector )
-	 another_shape.game_object:react_on_ball_collision(
-	    ball.collider_shape,
-	    (-1) * vector( separating_vector.x, separating_vector.y )  )
+         ball:react_on_brick_collision( another_shape, separating_vector )
+         another_shape.game_object:react_on_ball_collision(
+            ball.collider_shape,
+            (-1) * vector( separating_vector.x, separating_vector.y )  )
       end
    end
 end

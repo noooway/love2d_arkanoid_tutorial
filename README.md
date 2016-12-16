@@ -1,29 +1,26 @@
 This tutorial describes how to write a more or less full-featured [Arkanoid](https://en.wikipedia.org/wiki/Arkanoid) ([Breakout](https://en.wikipedia.org/wiki/Breakout_%28video_game%29)) clone. 
-While simple, it contains many elements found in more elaborate games.
 
-The intended audience are people, who know how to program, but don't
-know how to structure the code to make a full-featured game.
-My aim is to introduce some common constructs,
-used in game programming, and
-to provide a starting point for further modifications.
+The intended audience are people, who have basic programming experience, but have
+trouble structuring their code for projects bigger than 'hello world'.
+An Arkanoid, while simple, contains many elements found in more elaborate games.
+My aim is to introduce a typical code structure,
+and to provide a starting point for further modifications.
 
-The code structure discussed in parts from 1 to 11 and the 26
-can be transfered to almost any game you are going to write.
+The ideas discussed in parts from 1 to 11 and the 26
+can be applied to a wide range of games.
 The rest is mostly specific for this project.
-I realise that the length of the tutorial - almost 30 parts -
+I realize that the length of the tutorial - almost 30 parts -
 is probably a bit too much. On the other hand,
 the amount of work necessary to write a game is
 commonly underestimated and this tutorial 
 clearly shows what it actually takes to develop a game.
-Mind though, that only programming is discussed; the graphics and the 
-sound are just taken for granted.
 
 Lua programming language and [LÖVE](https://love2d.org/) framework are used.
 Basic programming experience is assumed.
 Familiarity with Lua and Love2D is beneficial but not necessary.
 Some non-obvious Lua idioms are briefly explained.
 
-Each step can be run with the `love` interpreter by issuing a `love` 
+Each step can be run with the LÖVE interpreter by issuing a `love` 
 command followed by the folder name, for example
 
     cd /your-path/love2d_arkanoid_tutorial

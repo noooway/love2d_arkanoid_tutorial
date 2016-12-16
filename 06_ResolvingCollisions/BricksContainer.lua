@@ -50,11 +50,11 @@ end
 function BricksContainer:update( dt )
    for i, brick_row in pairs( self.bricks ) do
       for j, brick in pairs( brick_row ) do
-	 brick:update( dt )
-	 if brick.to_destroy then
-	    brick.collider:remove( brick.collider_shape )
-	    self.bricks[i][j] = nil
-	 end
+         brick:update( dt )
+         if brick.to_destroy then
+            brick:destroy()
+            self.bricks[i][j] = nil
+         end
       end
    end   
 end
