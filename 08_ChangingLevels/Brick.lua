@@ -2,6 +2,7 @@ local vector = require "vector"
 local love = love
 local setmetatable = setmetatable
 local math = math
+local print = print
 
 local Brick = {}
 
@@ -56,6 +57,19 @@ function Brick:react_on_ball_collision(	another_shape, separating_vector )
    local dx, dy = separating_vector.x, separating_vector.y
    if ( math.abs( dx ) > big_enough_overlap ) or
       ( math.abs( dy ) > big_enough_overlap ) then
+	 self.to_destroy = true
+   end
+end
+
+function Brick:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
+function Brick:mousepressed( x, y, button, istouch )
+   if button == 'l' and 
+      self.position.x < x and x < ( self.position.x + self.width ) and
+      self.position.y < y and y < ( self.position.y + self.height ) then      
 	 self.to_destroy = true
    end
 end
