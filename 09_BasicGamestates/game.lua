@@ -94,6 +94,10 @@ function switch_to_next_level()
    end
 end
 
+function game:mousepressed( x, y, button, istouch )
+   bricks_container:mousepressed( x, y, button, istouch )
+end
+
 function game:leave()
    level_sequence = nil
    level_counter = nil

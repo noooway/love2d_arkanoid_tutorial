@@ -1,8 +1,5 @@
 local Gamestate = require "gamestate"
-menu = {}
-game = {}
 local menu = require "menu"
-local game = require "game"
 
 function love.load()	
    Gamestate.registerEvents()
