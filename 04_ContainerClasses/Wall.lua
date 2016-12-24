@@ -17,7 +17,7 @@ function Wall:new( o )
    o.name = o.name or "wall"
    o.position = o.position or vector( 0, 0 )
    o.width = o.width or 20
-   o.height = o.height or love.window.getHeight()
+   o.height = o.height or love.graphics.getHeight()
    return o
 end
 

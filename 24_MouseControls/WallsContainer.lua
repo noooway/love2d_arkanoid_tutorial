@@ -28,14 +28,14 @@ function WallsContainer:new( o )
    local left_wall = Wall:new{
       position = vector( 0, 0 ),
       width = o.wall_thickness,
-      height = love.window.getHeight(),
+      height = love.graphics.getHeight(),
       layout = "left",
       collider = o.collider
    }
    local right_wall = Wall:new{
       position = vector( right_border_x_pos, 0 ),
       width = o.wall_thickness,
-      height = love.window.getHeight(),
+      height = love.graphics.getHeight(),
       layout = "right",
       collider = o.collider
    }
@@ -47,8 +47,8 @@ function WallsContainer:new( o )
       collider = o.collider
    }
    local bottom_wall = Wall:new{
-      position = vector( 0, love.window.getHeight() ),
-      width = love.window.getWidth(),
+      position = vector( 0, love.graphics.getHeight() ),
+      width = love.graphics.getWidth(),
       height = o.wall_thickness,
       collider = o.collider
    }   

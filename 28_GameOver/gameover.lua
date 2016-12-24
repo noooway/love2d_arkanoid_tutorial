@@ -72,8 +72,8 @@ function gameover:cast_shadow()
    love.graphics.rectangle("fill",
 			   0,
 			   0,
-			   love.window.getWidth(),
-			   love.window.getHeight() )
+			   love.graphics.getWidth(),
+			   love.graphics.getHeight() )
    love.graphics.setColor( r, g, b, a )
 end
 

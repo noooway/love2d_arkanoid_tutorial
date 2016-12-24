@@ -88,7 +88,7 @@ end
 function Ball:check_escape_from_screen()
    local x, y = self.position:unpack()
    local ball_top = y - self.radius
-   if ball_top > love.window.getHeight() then
+   if ball_top > love.graphics.getHeight() then
       self.to_destroy = true
    end
 end

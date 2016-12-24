@@ -24,24 +24,24 @@ function WallsContainer:new( o )
    local left_wall = Wall:new{
       position = vector( 0, 0 ),
       width = o.wall_thickness,
-      height = love.window.getHeight(),
+      height = love.graphics.getHeight(),
       collider = o.collider
    }
    local right_wall = Wall:new{
-      position = vector( love.window.getWidth() - o.wall_thickness, 0 ),
+      position = vector( love.graphics.getWidth() - o.wall_thickness, 0 ),
       width = o.wall_thickness,
-      height = love.window.getHeight(),
+      height = love.graphics.getHeight(),
       collider = o.collider
    }
    local top_wall = Wall:new{
       position = vector( 0, 0 ),
-      width = love.window.getWidth(),
+      width = love.graphics.getWidth(),
       height = o.wall_thickness,
       collider = o.collider
    }
    local bottom_wall = Wall:new{
-      position = vector( 0, love.window.getHeight() - o.wall_thickness ),
-      width = love.window.getWidth(),
+      position = vector( 0, love.graphics.getHeight() - o.wall_thickness ),
+      width = love.graphics.getWidth(),
       height = o.wall_thickness,
       collider = o.collider
    }   
