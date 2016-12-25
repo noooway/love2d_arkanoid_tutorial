@@ -53,9 +53,9 @@ function gamepaused:keyreleased( key, code )
 end
 
 function gamepaused:mousereleased( x, y, button )
-   if button == 'l' then
+   if button == 'l' or button == 1 then
       Gamestate.switch( game, game_objects )
-   elseif button == 'r' then
+   elseif button == 'r' or button == 2 then
       love.event.quit()
    end   
 end

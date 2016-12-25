@@ -138,11 +138,11 @@ function gamefinished:draw()
    local oldfont = love.graphics.getFont()
    love.graphics.setFont( bungee_font )
    love.graphics.printf( "Congratulations!",
-			 300, 70, 200, "center" )
+			 235, 70, 350, "center" )
    love.graphics.printf( "You have finished the game!",
 			 100, 110, 600, "center" )
    love.graphics.printf( "---Credits---",
-			 300, 220, 200, "center" )
+			 276, 220, 250, "center" )
    love.graphics.printf( "Code",
 			 10, 265, 260, "center" )
    love.graphics.setFont( bungee_font_links )
@@ -188,7 +188,7 @@ function gamefinished:keyreleased( key, code )
 end
 
 function gamefinished:mousereleased( x, y, button )
-   if button == 'r' then
+   if button == 'r' or button == 2 then
       love.event.quit()
    end   
    gamecode_button:mousereleased( x, y, button )

@@ -57,7 +57,7 @@ function BallsContainer:keyreleased( key, scancode, platform )
 end
 
 function BallsContainer:mousereleased( x, y, button, istouch, platform )
-   if button == 'l' then
+   if button == 'l' or button == 1 then
       local stuck = {}
       for key, ball in pairs( self.balls ) do
 	 if ball.stuck_to_platform then

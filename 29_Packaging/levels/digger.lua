@@ -8,7 +8,7 @@ else
    _ENV = level -- for 5.2
 end
 
-name = "digger" 
+name = "dig it" 
 
 bricks = {
    {13, 13, 13, 13, 16, 13, 13, 13},

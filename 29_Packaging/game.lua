@@ -234,7 +234,7 @@ end
 
 function game:mousereleased( x, y, button, istouch )
    balls_container:mousereleased( x, y, button, istouch, platform )
-   if button == 'r' then
+   if button == 'r' or button == 2 then
       Gamestate.switch( gamepaused,
 			{ level_sequence = level_sequence,
 			  level_counter = level_counter,

@@ -18,8 +18,8 @@ function ScoreDisplay:new( o )
    setmetatable(o, self)
    self.__index = self
    o.name = o.name or "score_display"
-   o.position = o.position or vector( 670, 32 )
-   o.width = o.width or 70
+   o.position = o.position or vector( 650, 32 )
+   o.width = o.width or 120
    o.height = o.height or 65
    o.score = o.score or 0
    o.separation = o.separation or 35

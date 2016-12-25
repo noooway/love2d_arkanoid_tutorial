@@ -53,9 +53,9 @@ function gameover:keyreleased( key, code )
 end
 
 function gameover:mousereleased( x, y, button )
-   if button == 'l' then
+   if button == 'l' or button == 1 then
       Gamestate.switch( game, { level_counter = 1 } )
-   elseif button == 'r' then
+   elseif button == 'r' or button == 2 then
       love.event.quit()
    end   
 end
