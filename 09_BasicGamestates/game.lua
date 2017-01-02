@@ -81,9 +81,9 @@ function switch_to_next_level()
       if level_counter > #level_sequence.sequence then
 	 love.event.quit()
       else
-	 ball = nil
-	 platform = nil
-	 bricks_container = nil
+	 ball:destroy(); ball = nil
+	 platform:destroy(); platform = nil
+	 bricks_container:destroy(); bricks_container = nil
 	 level_filename = "levels/" .. level_sequence.sequence[ level_counter ]
 	 level = require( level_filename )
 	 ball = Ball:new( { collider = collider } )
@@ -104,10 +104,10 @@ function game:leave()
    level_filename = nil
    level = nil
    collider = nil
-   ball = nil
-   platform = nil
-   bricks_container = nil
-   walls_container = nil
+   ball:destroy(); ball = nil
+   platform:destroy(); platform = nil
+   bricks_container:destroy(); bricks_container = nil
+   walls_container:destroy(); walls_container = nil
 end
 
 return game

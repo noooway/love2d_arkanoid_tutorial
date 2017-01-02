@@ -68,9 +68,10 @@ end
 
 function Brick:mousepressed( x, y, button, istouch )
    if button == 'l' or button == 1 then
-      self.position.x < x and x < ( self.position.x + self.width ) and
+      if self.position.x < x and x < ( self.position.x + self.width ) and
       self.position.y < y and y < ( self.position.y + self.height ) then
 	 self.to_destroy = true
+      end
    end
 end
 
