@@ -92,7 +92,7 @@ function BricksContainer:update( dt )
       for j, brick in pairs( brick_row ) do
 	 brick:update( dt )
 	 if brick.to_destroy then
-	    brick.collider:remove( brick.collider_shape )
+	    brick:destroy()
 	    self.bricks[i][j] = nil
 	 end
       end
@@ -108,6 +108,14 @@ function BricksContainer:draw()
    end   
 end
 
+function BricksContainer:destroy()   
+   for _, brick_row in pairs( self.bricks ) do
+      for _, brick in pairs( brick_row ) do
+	 brick:destroy()
+      end
+   end      
+end
+
 function BricksContainer:check_if_no_more_bricks()
    local empty_row = true
    for _, brick_row in pairs( self.bricks ) do
@@ -118,6 +126,14 @@ function BricksContainer:check_if_no_more_bricks()
       end
    end
    self.no_more_bricks = empty_row
+end
+
+function BricksContainer:mousepressed( x, y, button, istouch )   
+   for _, brick_row in pairs( self.bricks ) do
+      for _, brick in pairs( brick_row ) do
+	 brick:mousepressed( x, y, button, istouch )
+      end
+   end      
 end
 
 return BricksContainer

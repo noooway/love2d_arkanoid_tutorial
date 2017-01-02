@@ -60,11 +60,17 @@ function Brick:react_on_ball_collision(	another_shape, separating_vector )
    end
 end
 
+function Brick:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
 function Brick:mousepressed( x, y, button, istouch )
    if button == 'l' or button == 1 then
-      self.position.x < x and x < ( self.position.x + self.width ) and
+      if self.position.x < x and x < ( self.position.x + self.width ) and
       self.position.y < y and y < ( self.position.y + self.height ) then
 	 self.to_destroy = true
+      end
    end
 end
 
