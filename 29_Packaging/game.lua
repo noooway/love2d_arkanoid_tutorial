@@ -132,7 +132,8 @@ function resolve_collisions( dt )
 end
 
 function switch_to_next_level()
-   if bricks_container.no_more_bricks then
+   if bricks_container.no_more_bricks or
+   game.switch_to_next_level_after_next_level_bonus then
       level_counter = level_counter + 1
       if level_counter > #level_sequence.sequence then
 	 Gamestate.switch( gamefinished )
@@ -173,14 +174,15 @@ function reposition_the_ball( platform )
 end
 
 function game:react_on_next_level_bonus()
-   level_counter = level_counter + 1 
-   if level_counter <= #level_sequence.sequence then
-      Gamestate.switch( game, { level_sequence = level_sequence,
-				level_counter = level_counter,
-				side_panel = side_panel } )
-   else
-      Gamestate.switch( gamefinished )
-   end	
+   game.switch_to_next_level_after_next_level_bonus = true
+   -- level_counter = level_counter + 1 
+   -- if level_counter <= #level_sequence.sequence then
+   --    Gamestate.switch( game, { level_sequence = level_sequence,
+   -- 				level_counter = level_counter,
+   -- 				side_panel = side_panel } )
+   -- else
+   --    Gamestate.switch( gamefinished )
+   -- end	
 end
 
 function game:keyreleased( key, code )

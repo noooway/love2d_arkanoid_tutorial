@@ -208,8 +208,9 @@ function Ball:increase_collision_counter()
 end
 
 function Ball:increase_speed_after_collision()
-   if self.collision_counter % 5 == 0 then
-      self.speed = self.speed * self.collision_speed_multiplier
+   local speed_increase = 20
+   if self.collision_counter % 10 == 0 then
+      self.speed = self.speed + self.speed:normalized() * speed_increase
    end
 end
 
