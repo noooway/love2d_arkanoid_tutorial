@@ -34,11 +34,7 @@ function Brick:new( o )
 					    o.height )
    o.collider_shape.game_object = o
    o.to_destroy = o.to_destroy or false
-   if o.bricktype then
-      o.quad = o:bricktype_to_quad()
-   else
-      o.quad = nil
-   end
+   o.quad = o:bricktype_to_quad()
    return o
 end
 
@@ -120,5 +116,18 @@ function Brick:scrathed_to_cracked()
    self.quad = self:bricktype_to_quad()
 end
 
+function Brick:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
+function Brick:mousepressed( x, y, button, istouch )
+   if button == 'l' or button == 1 then
+      if self.position.x < x and x < ( self.position.x + self.width ) and
+      self.position.y < y and y < ( self.position.y + self.height ) then
+	 self.to_destroy = true
+      end
+   end
+end
       
 return Brick

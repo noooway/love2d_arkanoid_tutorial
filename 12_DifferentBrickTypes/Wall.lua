@@ -42,4 +42,9 @@ function Wall:draw()
    love.graphics.setColor( r, g, b, a )
 end
 
+function Wall:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
 return Wall

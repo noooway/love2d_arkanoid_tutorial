@@ -74,4 +74,9 @@ function Platform:react_on_wall_collision( another_shape, separating_vector )
 			       self.position.y + self.height / 2 )   
 end
 
+function Platform:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
+
 return Platform

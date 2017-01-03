@@ -86,5 +86,9 @@ function Ball:normal_rebound( separating_vector )
    self.speed = vector( new_vx, new_vy )
 end
 
+function Ball:destroy()
+   self.collider_shape.game_object = nil
+   self.collider:remove( self.collider_shape )
+end
 
 return Ball

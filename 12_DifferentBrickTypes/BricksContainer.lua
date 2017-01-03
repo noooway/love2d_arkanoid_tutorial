@@ -45,8 +45,8 @@ function BricksContainer:default_level_construction_procedure()
       for col = 1, self.columns do	 
 	 local new_brick_position = self.top_left_position +
 	    vector(
-	       ( col - 1 ) * ( self.brick_width + self.horizontal_distance ),
-	       ( row - 1 ) * ( self.brick_height + self.vertical_distance ) )
+	       (col - 1) * (self.brick_width + self.horizontal_distance),
+	       (row - 1) * (self.brick_height + self.vertical_distance) )
 	 local new_brick = Brick:new{
 	    width = self.brick_width,
 	    height = self.brick_height,
@@ -92,7 +92,7 @@ function BricksContainer:update( dt )
       for j, brick in pairs( brick_row ) do
 	 brick:update( dt )
 	 if brick.to_destroy then
-	    brick.collider:remove( brick.collider_shape )
+	    brick:destroy()
 	    self.bricks[i][j] = nil
 	 end
       end
@@ -106,6 +106,14 @@ function BricksContainer:draw()
 	 brick:draw()
       end
    end   
+end
+
+function BricksContainer:destroy()   
+   for _, brick_row in pairs( self.bricks ) do
+      for _, brick in pairs( brick_row ) do
+	 brick:destroy()
+      end
+   end      
 end
 
 function BricksContainer:check_if_no_more_bricks()
@@ -123,6 +131,14 @@ function BricksContainer:check_if_no_more_bricks()
       end
    end
    self.no_more_bricks = empty_row
+end
+
+function BricksContainer:mousepressed( x, y, button, istouch )   
+   for _, brick_row in pairs( self.bricks ) do
+      for _, brick in pairs( brick_row ) do
+	 brick:mousepressed( x, y, button, istouch )
+      end
+   end      
 end
 
 return BricksContainer
