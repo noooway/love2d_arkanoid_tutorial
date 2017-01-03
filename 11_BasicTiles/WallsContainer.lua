@@ -68,4 +68,10 @@ function WallsContainer:draw()
    end   
 end
 
+function WallsContainer:destroy()
+   for _, wall in pairs( self.walls ) do
+      wall:destroy()
+   end   
+end
+
 return WallsContainer

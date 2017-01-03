@@ -62,7 +62,8 @@ function resolve_collisions( dt )
    local collisions = collider:collisions( platform.collider_shape )
    for another_shape, separating_vector in pairs( collisions ) do
       if another_shape.game_object.name == "wall" then
-	 platform:react_on_wall_collision( another_shape, separating_vector )
+	 platform:react_on_wall_collision( another_shape,
+					   separating_vector )
       end
    end
    -- Ball
@@ -71,7 +72,8 @@ function resolve_collisions( dt )
       if another_shape.game_object.name == "wall" then
 	 ball:react_on_wall_collision( another_shape, separating_vector )
       elseif another_shape.game_object.name == "platform" then
-	 ball:react_on_platform_collision( another_shape, separating_vector )
+	 ball:react_on_platform_collision( another_shape,
+					   separating_vector )
       elseif another_shape.game_object.name == "brick" then
 	 ball:react_on_brick_collision( another_shape, separating_vector )
 	 another_shape.game_object:react_on_ball_collision(
@@ -84,13 +86,15 @@ end
 function switch_to_next_level()
    if bricks_container.no_more_bricks then
       level_counter = level_counter + 1
+      ball:destroy()
+      platform:destroy()
+      bricks_container:destroy()
+      walls_container:destroy()
       if level_counter > #level_sequence.sequence then
 	 Gamestate.switch( gamefinished )
       else
 	 Gamestate.switch( game, { level_sequence = level_sequence,
-				   level_counter = level_counter,
-				   collider = collider,
-				   walls_container = walls_container } )
+				   level_counter = level_counter } )
       end
    end
 end
@@ -107,6 +111,10 @@ function game:keyreleased( key, code )
 			  walls_container = walls_container,
 			  bricks_container = bricks_container } )
    end
+end
+
+function game:mousepressed( x, y, button, istouch )
+   bricks_container:mousepressed( x, y, button, istouch )
 end
 
 function game:leave()
