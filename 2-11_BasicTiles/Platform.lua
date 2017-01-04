@@ -32,7 +32,7 @@ function Platform:new( o )
    setmetatable(o, self)
    self.__index = self
    o.name = o.name or "platform"
-   o.position = o.position or vector( 500, 500 )
+   o.position = o.position or vector( 300, 500 )
    o.speed = o.speed or vector( 300, 0 )
    o.width = o.width or platform_norm_tile_width
    o.height = o.height or platform_norm_tile_height

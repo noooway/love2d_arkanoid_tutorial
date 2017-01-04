@@ -25,7 +25,7 @@ function Ball:new( o )
    self.__index = self
    o.name = o.name or "ball"
    o.radius = o.radius or ball_tile_width / 2
-   o.position = o.position or vector( 500, 500 )
+   o.position = o.position or vector( 400, 400 )
    o.speed = o.speed or vector( 300, 300 )
    o.collider = o.collider or {}
    o.collider_shape = o.collider:circle( o.position.x,
