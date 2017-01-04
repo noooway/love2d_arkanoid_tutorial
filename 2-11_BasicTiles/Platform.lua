@@ -33,7 +33,7 @@ function Platform:new( o )
    self.__index = self
    o.name = o.name or "platform"
    o.position = o.position or vector( 300, 500 )
-   o.speed = o.speed or vector( 300, 0 )
+   o.speed = o.speed or vector( 800, 0 )
    o.width = o.width or platform_norm_tile_width
    o.height = o.height or platform_norm_tile_height
    o.collider = o.collider or {}
