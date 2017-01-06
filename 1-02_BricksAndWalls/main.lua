@@ -46,7 +46,6 @@ function platform.draw()
 			    platform.height )   
 end
 
-
 -- Bricks
 local bricks = {}
 bricks.rows = 8
@@ -59,6 +58,24 @@ bricks.horizontal_distance = 10
 bricks.vertical_distance = 15
 bricks.current_level_bricks = {}
 
+function bricks.new_brick( position_x, position_y, width, height )
+   return( { position_x = position_x,
+	     position_y = position_y,
+	     width = width or bricks.brick_width,
+	     height = height or bricks.brick_height } )
+end
+
+function bricks.update_brick( single_brick )   
+end
+
+function bricks.draw_brick( single_brick )
+   love.graphics.rectangle( 'line',
+			    single_brick.position_x,
+			    single_brick.position_y,
+			    single_brick.width,
+			    single_brick.height )   
+end
+
 function bricks.construct_level()
    for row = 1, bricks.rows do
       for col = 1, bricks.columns do
@@ -68,8 +85,8 @@ function bricks.construct_level()
 	 local new_brick_position_y = bricks.top_left_position_y +
 	    ( row - 1 ) *
 	    ( bricks.brick_height + bricks.vertical_distance )
-	 local new_brick = { x = new_brick_position_x,
-			     y = new_brick_position_y }
+	 local new_brick = bricks.new_brick( new_brick_position_x,
+					     new_brick_position_y )
 	 table.insert( bricks.current_level_bricks, new_brick )
       end      
    end   
@@ -80,11 +97,7 @@ end
 
 function bricks.draw()
    for _, brick in pairs( bricks.current_level_bricks ) do
-      love.graphics.rectangle( 'line',
-			       brick.x,
-			       brick.y,
-			       bricks.brick_width,
-			       bricks.brick_height )
+      bricks.draw_brick( brick )
    end
 end
 
@@ -92,49 +105,63 @@ end
 -- Walls 
 local walls = {}
 walls.wall_thickness = 20
-walls.walls = {}
+walls.current_level_walls = {}
+
+function walls.new_wall( position_x, position_y, width, height )
+   return( { position_x = position_x,
+	     position_y = position_y,
+	     width = width,
+	     height = height } )
+end
+
+function walls.update_wall( single_wall )
+end
+
+function walls.draw_wall( single_wall )
+   love.graphics.rectangle( 'line',
+			    single_wall.position_x,
+			    single_wall.position_y,
+			    single_wall.width,
+			    single_wall.height )
+end
 
 function walls.construct_walls()
-   local left_wall = {
-      x = 0,
-      y = 0,
-      width = walls.wall_thickness,
-      height = love.graphics.getHeight()
-   }
-   local right_wall = {
-      x = love.graphics.getWidth() - walls.wall_thickness,
-      y = 0,
-      width = walls.wall_thickness,
-      height = love.graphics.getHeight()
-   }
-   local top_wall = {
-      x = 0,
-      y = 0,
-      width = love.graphics.getWidth(),
-      height = walls.wall_thickness,
-   }
-   local bottom_wall = {
-      x = 0,
-      y = love.graphics.getHeight() - walls.wall_thickness,
-      width = love.graphics.getWidth(),
-      height = walls.wall_thickness,
-   }   
-   walls.walls.left = left_wall
-   walls.walls.right = right_wall
-   walls.walls.top = top_wall
-   walls.walls.bottom = bottom_wall
+   local left_wall = walls.new_wall(
+      0,
+      0,
+      walls.wall_thickness,
+      love.graphics.getHeight()
+   )
+   local right_wall = walls.new_wall(
+      love.graphics.getWidth() - walls.wall_thickness,
+      0,
+      walls.wall_thickness,
+      love.graphics.getHeight()
+   )
+   local top_wall = walls.new_wall(
+      0,
+      0,
+      love.graphics.getWidth(),
+      walls.wall_thickness
+   )
+   local bottom_wall = walls.new_wall(
+      0,
+      love.graphics.getHeight() - walls.wall_thickness,
+      love.graphics.getWidth(),
+      walls.wall_thickness
+   ) 
+   walls.current_level_walls["left"] = left_wall
+   walls.current_level_walls["right"] = right_wall
+   walls.current_level_walls["top"] = top_wall
+   walls.current_level_walls["bottom"] = bottom_wall
 end
 
 function walls.update( dt )
 end
 
 function walls.draw()
-   for _, wall in pairs( walls.walls ) do
-      love.graphics.rectangle( 'line',
-			       wall.x,
-			       wall.y,
-			       wall.width,
-			       wall.height )
+   for _, wall in pairs( walls.current_level_walls ) do
+      walls.draw_wall( wall )
    end
 end
 

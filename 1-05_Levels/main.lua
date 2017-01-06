@@ -22,7 +22,8 @@ end
 
 function ball.rebound( shift_ball_x, shift_ball_y )
    local big_enough_overlap = 0.5
-   local min_shift = math.min( math.abs( shift_ball_x ), math.abs( shift_ball_y ) )
+   local min_shift = math.min( math.abs( shift_ball_x ),
+			       math.abs( shift_ball_y ) )
    if math.abs( shift_ball_x ) == min_shift then
       shift_ball_y = 0
    else
@@ -38,6 +39,10 @@ function ball.rebound( shift_ball_x, shift_ball_y )
    end
 end
 
+function ball.reposition()
+   ball.position_x = 200
+   ball.position_y = 500   
+end
 
 
 -- Platform
@@ -82,6 +87,24 @@ bricks.vertical_distance = 15
 bricks.current_level_bricks = {}
 bricks.no_more_bricks = false
 
+function bricks.new_brick( position_x, position_y, width, height )
+   return( { position_x = position_x,
+	     position_y = position_y,
+	     width = width or bricks.brick_width,
+	     height = height or bricks.brick_height } )
+end
+
+function bricks.update_brick( single_brick )   
+end
+
+function bricks.draw_brick( single_brick )
+   love.graphics.rectangle( 'line',
+			    single_brick.position_x,
+			    single_brick.position_y,
+			    single_brick.width,
+			    single_brick.height )   
+end
+
 function bricks.construct_level( levels )
    bricks.no_more_bricks = false
    for row_index, row in pairs( levels[ levels.current_level ] ) do
@@ -93,8 +116,8 @@ function bricks.construct_level( levels )
 	    local new_brick_position_y = bricks.top_left_position_y +
 	       ( row_index - 1 ) *
 	       ( bricks.brick_height + bricks.vertical_distance )
-	    local new_brick = { x = new_brick_position_x,
-				y = new_brick_position_y }
+	    local new_brick = bricks.new_brick( new_brick_position_x,
+						new_brick_position_y )
 	    table.insert( bricks.current_level_bricks, new_brick )
 	 end
       end
@@ -109,64 +132,79 @@ end
 
 function bricks.draw()
    for _, brick in pairs( bricks.current_level_bricks ) do
-      love.graphics.rectangle( 'line',
-			       brick.x,
-			       brick.y,
-			       bricks.brick_width,
-			       bricks.brick_height )
+      bricks.draw_brick( brick )
    end
 end
 
-function bricks.brick_hit_by_ball( i, brick )
-   table.remove( bricks.current_level_bricks, i )
+function bricks.brick_hit_by_ball( i, brick,
+				   shift_ball_x, shift_ball_y )
+   local big_enough_overlap = 0.5
+   if math.abs( shift_ball_x ) > big_enough_overlap or
+      math.abs( shift_ball_y ) > big_enough_overlap then
+	 table.remove( bricks.current_level_bricks, i )
+   end
 end
 
 -- Walls 
 local walls = {}
 walls.wall_thickness = 20
-walls.walls = {}
+walls.current_level_walls = {}
+
+function walls.new_wall( position_x, position_y, width, height )
+   return( { position_x = position_x,
+	     position_y = position_y,
+	     width = width,
+	     height = height } )
+end
+
+function walls.update_wall( single_wall )
+end
+
+function walls.draw_wall( single_wall )
+   love.graphics.rectangle( 'line',
+			    single_wall.position_x,
+			    single_wall.position_y,
+			    single_wall.width,
+			    single_wall.height )
+end
 
 function walls.construct_walls()
-   local left_wall = {
-      x = 0,
-      y = 0,
-      width = walls.wall_thickness,
-      height = love.graphics.getHeight()
-   }
-   local right_wall = {
-      x = love.graphics.getWidth() - walls.wall_thickness,
-      y = 0,
-      width = walls.wall_thickness,
-      height = love.graphics.getHeight()
-   }
-   local top_wall = {
-      x = 0,
-      y = 0,
-      width = love.graphics.getWidth(),
-      height = walls.wall_thickness,
-   }
-   local bottom_wall = {
-      x = 0,
-      y = love.graphics.getHeight() - walls.wall_thickness,
-      width = love.graphics.getWidth(),
-      height = walls.wall_thickness,
-   }   
-   walls.walls.left = left_wall
-   walls.walls.right = right_wall
-   walls.walls.top = top_wall
-   walls.walls.bottom = bottom_wall
+   local left_wall = walls.new_wall(
+      0,
+      0,
+      walls.wall_thickness,
+      love.graphics.getHeight()
+   )
+   local right_wall = walls.new_wall(
+      love.graphics.getWidth() - walls.wall_thickness,
+      0,
+      walls.wall_thickness,
+      love.graphics.getHeight()
+   )
+   local top_wall = walls.new_wall(
+      0,
+      0,
+      love.graphics.getWidth(),
+      walls.wall_thickness
+   )
+   local bottom_wall = walls.new_wall(
+      0,
+      love.graphics.getHeight() - walls.wall_thickness,
+      love.graphics.getWidth(),
+      walls.wall_thickness
+   ) 
+   walls.current_level_walls["left"] = left_wall
+   walls.current_level_walls["right"] = right_wall
+   walls.current_level_walls["top"] = top_wall
+   walls.current_level_walls["bottom"] = bottom_wall
 end
 
 function walls.update( dt )
 end
 
 function walls.draw()
-   for _, wall in pairs( walls.walls ) do
-      love.graphics.rectangle( 'line',
-			       wall.x,
-			       wall.y,
-			       wall.width,
-			       wall.height )
+   for _, wall in pairs( walls.current_level_walls ) do
+      walls.draw_wall( wall )
    end
 end
 
@@ -224,16 +262,15 @@ function collisions.ball_walls_collision( ball, walls )
 	       y = ball.position_y - ball.radius,
 	       width = 2 * ball.radius,
 	       height = 2 * ball.radius }
-   for _, wall in pairs( walls.walls ) do
-      local a = { x = wall.x,
-		  y = wall.y,
+   for _, wall in pairs( walls.current_level_walls ) do
+      local a = { x = wall.position_x,
+		  y = wall.position_y,
 		  width = wall.width,
 		  height = wall.height }      
       overlap, shift_ball_x, shift_ball_y =
       	 collisions.check_rectangles_overlap( a, b )
       if overlap then
 	 ball.rebound( shift_ball_x, shift_ball_y )
-	 break
       end
    end
 end
@@ -245,16 +282,16 @@ function collisions.ball_bricks_collision( ball, bricks )
 	       width = 2 * ball.radius,
 	       height = 2 * ball.radius }
    for i, brick in pairs( bricks.current_level_bricks ) do   
-      local a = { x = brick.x,
-		  y = brick.y,
-		  width = bricks.brick_width,
-		  height = bricks.brick_height }
+      local a = { x = brick.position_x,
+		  y = brick.position_y,
+		  width = brick.width,
+		  height = brick.height }
       overlap, shift_ball_x, shift_ball_y =
       	 collisions.check_rectangles_overlap( a, b )
       if overlap then	 
 	 ball.rebound( shift_ball_x, shift_ball_y )
-	 bricks.brick_hit_by_ball( i, brick )
-	 break
+	 bricks.brick_hit_by_ball( i, brick,
+				   shift_ball_x, shift_ball_y )
       end
    end
 end
@@ -265,9 +302,9 @@ function collisions.platform_walls_collision()
 	       y = platform.position_y,
 	       width = platform.width,
 	       height = platform.height }
-   for _, wall in pairs( walls.walls ) do
-      local a = { x = wall.x,
-		  y = wall.y,
+   for _, wall in pairs( walls.current_level_walls ) do
+      local a = { x = wall.position_x,
+		  y = wall.position_y,
 		  width = wall.width,
 		  height = wall.height }      
       overlap, shift_platform_x, shift_platform_y =
@@ -275,7 +312,6 @@ function collisions.platform_walls_collision()
       if overlap then	 
 	 platform.bounce_from_wall( shift_platform_x,
 				    shift_platform_y )
-	 break
       end
    end
 end
@@ -286,31 +322,32 @@ levels.current_level = 1
 levels.max_level = 2
 levels.gamefinished = false
 levels[1] = {
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   { 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1},
-   { 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1},
-   { 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0},
-   { 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0},
-   { 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+   { 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1 },
+   { 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1 },
+   { 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0 },
+   { 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0 },
+   { 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0 },
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 }
 levels[2] = {
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   { 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1},
-   { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0},
-   { 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1},
-   { 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0},
-   { 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+   { 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1 },
+   { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0 },
+   { 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1 },
+   { 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0 },
+   { 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1 },
+   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 }
 
 function levels.switch_to_next_level( bricks )
    if bricks.no_more_bricks then
       if levels.current_level < levels.max_level then
 	 levels.current_level = levels.current_level + 1
-	 bricks.construct_level( levels )
+	 ball.reposition()
+	 bricks.construct_level( levels )	 
       elseif levels.current_level >= levels.max_level then
 	 levels.gamefinished = true
       end
@@ -341,8 +378,16 @@ function love.draw()
    bricks.draw()
    walls.draw()
    if levels.gamefinished then
-      love.graphics.printf( "Congratulations!", 300, 250, 200, "center" )
+      love.graphics.printf( "Congratulations!\n" ..
+			       "You have finished the game!",
+			    300, 250, 200, "center" )
    end
+end
+
+function love.keyreleased( key, code )
+   if  key == 'escape' then
+      love.event.quit()
+   end    
 end
 
 function love.quit()
