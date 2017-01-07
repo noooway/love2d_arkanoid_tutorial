@@ -21,8 +21,8 @@ function ball.draw()
 end
 
 function ball.rebound( shift_ball_x, shift_ball_y )
-   local big_enough_overlap = 0.5
-   local min_shift = math.min( math.abs( shift_ball_x ), math.abs( shift_ball_y ) )
+   local min_shift = math.min( math.abs( shift_ball_x ),
+			       math.abs( shift_ball_y ) )
    if math.abs( shift_ball_x ) == min_shift then
       shift_ball_y = 0
    else
@@ -30,10 +30,10 @@ function ball.rebound( shift_ball_x, shift_ball_y )
    end
    ball.position_x = ball.position_x + shift_ball_x
    ball.position_y = ball.position_y + shift_ball_y
-   if math.abs( shift_ball_x ) > big_enough_overlap then
+   if shift_ball_x ~= 0 then
       ball.speed_x  = -ball.speed_x
    end
-   if math.abs( shift_ball_y ) > big_enough_overlap then
+   if shift_ball_y ~= 0 then
       ball.speed_y  = -ball.speed_y
    end
 end
@@ -126,10 +126,8 @@ end
 
 function bricks.brick_hit_by_ball( i, brick,
 				   shift_ball_x, shift_ball_y )
-   local big_enough_overlap = 0.5
-   if math.abs( shift_ball_x ) > big_enough_overlap or
-      math.abs( shift_ball_y ) > big_enough_overlap then
-	 table.remove( bricks.current_level_bricks, i )
+   if shift_ball_x ~= 0 or shift_ball_y ~= 0 then
+      table.remove( bricks.current_level_bricks, i )
    end
 end
 
