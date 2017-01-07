@@ -218,7 +218,7 @@ function collisions.check_rectangles_overlap( a, b )
       end
       if ( a.y + a.height / 2 ) < ( b.y + b.height / 2 ) then
 	 shift_b_y = ( a.y + a.height ) - b.y
-      elseif a.y < b.y + b.height and a.y + a.height > b.y + b.height then
+      else
 	 shift_b_y = a.y - ( b.y + b.height )      
       end      
    end
