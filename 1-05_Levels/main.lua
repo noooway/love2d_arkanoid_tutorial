@@ -104,9 +104,9 @@ function bricks.draw_brick( single_brick )
 			    single_brick.height )   
 end
 
-function bricks.construct_level( levels )
+function bricks.construct_level( level_bricks_arrangement )
    bricks.no_more_bricks = false
-   for row_index, row in pairs( levels[ levels.current_level ] ) do
+   for row_index, row in pairs( level_bricks_arrangement ) do
       for col_index, bricktype in pairs( row ) do
 	 if bricktype ~= 0 then
 	    local new_brick_position_x = bricks.top_left_position_x +
@@ -229,7 +229,7 @@ function collisions.check_rectangles_overlap( a, b )
       end
       if ( a.y + a.height / 2 ) < ( b.y + b.height / 2 ) then
 	 shift_b_y = ( a.y + a.height ) - b.y
-      elseif a.y < b.y + b.height and a.y + a.height > b.y + b.height then
+      else
 	 shift_b_y = a.y - ( b.y + b.height )      
       end      
    end
@@ -316,9 +316,9 @@ end
 -- Levels
 local levels = {}
 levels.current_level = 1
-levels.max_level = 2
 levels.gamefinished = false
-levels[1] = {
+levels.sequence = {}
+levels.sequence[1] = {
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
    { 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1 },
@@ -328,7 +328,8 @@ levels[1] = {
    { 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0 },
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 }
-levels[2] = {
+
+levels.sequence[2] = {
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
    { 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1 },
@@ -341,11 +342,11 @@ levels[2] = {
 
 function levels.switch_to_next_level( bricks )
    if bricks.no_more_bricks then
-      if levels.current_level < levels.max_level then
+      if levels.current_level < #levels.sequence then
 	 levels.current_level = levels.current_level + 1
+	 bricks.construct_level( levels.sequence[levels.current_level] )
 	 ball.reposition()
-	 bricks.construct_level( levels )	 
-      elseif levels.current_level >= levels.max_level then
+      elseif levels.current_level >= #levels.sequence then
 	 levels.gamefinished = true
       end
    end
@@ -354,7 +355,7 @@ end
 
 
 function love.load()
-   bricks.construct_level( levels )
+   bricks.construct_level( levels.sequence[levels.current_level] )
    walls.construct_walls()
 end
  
