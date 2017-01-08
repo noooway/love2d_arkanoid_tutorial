@@ -24,7 +24,7 @@ function platform.draw()
 end
 
 function platform.bounce_from_wall( shift_platform )
-   platform.position = platform.position + shift_platform
+   platform.position.x = platform.position.x + shift_platform.x
 end
 
 return platform
