@@ -12,9 +12,7 @@ function love.load()
 end
  
 function love.update( dt )
-   if not levels.gamefinished then
-      ball.update( dt )
-   end
+   ball.update( dt )
    platform.update( dt )
    bricks.update( dt )
    walls.update( dt )
@@ -35,7 +33,9 @@ function love.draw()
 end
 
 function love.keyreleased( key, code )
-   if  key == 'escape' then
+   if key == 'c' then
+      bricks.clear_current_level_bricks()
+   elseif key == 'escape' then
       love.event.quit()
    end    
 end
