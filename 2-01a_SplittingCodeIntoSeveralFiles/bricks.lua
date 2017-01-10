@@ -61,9 +61,7 @@ function bricks.draw()
 end
 
 function bricks.brick_hit_by_ball( i, brick, shift_ball )
-   if shift_ball.x ~= 0 or shift_ball.y ~= 0 then
-      table.remove( bricks.current_level_bricks, i )
-   end
+   table.remove( bricks.current_level_bricks, i )
 end
 
 return bricks
