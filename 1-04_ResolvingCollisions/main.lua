@@ -116,6 +116,9 @@ function bricks.construct_level()
 end
 
 function bricks.update( dt )
+   for _, brick in pairs( bricks.current_level_bricks ) do
+      bricks.update_brick( brick )
+   end
 end
 
 function bricks.draw()
@@ -183,6 +186,9 @@ function walls.construct_walls()
 end
 
 function walls.update( dt )
+   for _, wall in pairs( walls.current_level_walls ) do
+      walls.update_wall( wall )
+   end
 end
 
 function walls.draw()
