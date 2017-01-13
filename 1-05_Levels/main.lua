@@ -364,9 +364,7 @@ function love.load()
 end
  
 function love.update( dt )
-   if not levels.gamefinished then
-      ball.update( dt )
-   end
+   ball.update( dt )
    platform.update( dt )
    bricks.update( dt )
    walls.update( dt )
