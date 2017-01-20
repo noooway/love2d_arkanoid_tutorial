@@ -8,6 +8,11 @@ local levels = require "levels"
 local gamestate = "menu"
 
 function love.load()
+   local love_window_width = 800
+   local love_window_height = 600
+   love.window.setMode( love_window_width,
+                        love_window_height,
+                        { fullscreen = false } )
    level = levels.require_current_level()
    bricks.construct_level( level )
    walls.construct_walls()
