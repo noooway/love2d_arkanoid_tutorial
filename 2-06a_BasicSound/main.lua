@@ -7,6 +7,9 @@ local levels = require "levels"
 
 local gamestate = "menu"
 
+local music = love.audio.newSource( "sounds/S31-Night Prowler.ogg" )
+music:setLooping( true )
+
 function love.load()
    local love_window_width = 800
    local love_window_height = 600
@@ -16,6 +19,7 @@ function love.load()
    level = levels.require_current_level()
    bricks.construct_level( level )
    walls.construct_walls()
+   music:play()
 end
  
 function love.update( dt )
@@ -68,11 +72,13 @@ function love.keyreleased( key, code )
       if key == 'c' then
 	 bricks.clear_current_level_bricks()
       elseif  key == 'escape' then
-	 gamestate = "gamepaused"
+	 music:pause()
+	 gamestate = "gamepaused"	 
       end    
    elseif gamestate == "gamepaused" then
       if key == "return" then
 	 gamestate = "game"
+	 music:resume()
       elseif key == 'escape' then
 	 love.event.quit()
       end    
@@ -82,7 +88,8 @@ function love.keyreleased( key, code )
 	 level = levels.require_current_level()
 	 bricks.clear_current_level_bricks()
 	 bricks.construct_level( level )
-	 ball.reposition()	 	 
+	 ball.reposition()
+	 music:rewind()
 	 gamestate = "game"
       elseif key == 'escape' then
 	 love.event.quit()
