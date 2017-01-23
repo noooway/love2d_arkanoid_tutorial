@@ -120,7 +120,7 @@ function switch_to_next_level( bricks, ball, levels )
 	 bricks.clear_current_level_bricks()
 	 bricks.construct_level( level )
 	 ball.reposition()	 	 
-      elseif levels.current_level >= #levels.sequence then
+      else
 	 gamestate = "gamefinished"
       end
    end
