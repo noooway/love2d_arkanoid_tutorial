@@ -126,7 +126,7 @@ function switch_to_next_level( bricks, ball, levels )
    end
 end
 
-function check_no_more_balls( ball )
+function check_no_more_balls( ball, lives_display )
    if ball.escaped_screen then
       lives_display.lose_life()      
       if lives_display.lives < 0 then
