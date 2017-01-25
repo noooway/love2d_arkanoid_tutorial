@@ -1,7 +1,7 @@
 This tutorial describes how to write a more or less full-featured [Arkanoid](https://en.wikipedia.org/wiki/Arkanoid) ([Breakout](https://en.wikipedia.org/wiki/Breakout_%28video_game%29)) clone. 
 
 The intended audience are people, who have basic programming experience, but have
-trouble structuring their code for projects bigger than 'Hello World'.
+trouble structuring their code for projects bigger than "Hello World".
 An Arkanoid, while simple, contains many elements found in more elaborate games.
 My aim is to introduce a typical code structure,
 and to provide a starting point for further modifications.
@@ -14,17 +14,12 @@ without relying too much on any external libraries or advanced language features
 
 **Chapter 2** expands the prototype, introducing simple gamestates, basic graphics and sound.
 
-**Deprecated Chapter 2** is the initial version of the first two chapters of the tutorial.  
-Classes are introduced early on, [HardonCollider (HC)](https://github.com/vrld/HC) is used for collision detection
-and [hump.gamestate](https://github.com/vrld/hump) for the gamestates.
-After some discussion I've become convinced that classes should be postponed for later chapters or avoided altogether in such a simple game. HC is overkill and should be replaced either with [Bump](https://github.com/kikito/bump.lua) or with a manually written collision detection.  
-After Chapter 2 is ready, this material will be accessible only from the [Archive page](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive).
-
 **Chapter 3** proceeds to add details to achieve a full-featured game. 
 I'm deliberately going to try to make 
 articles in this chapter short, only sketching a general idea of what is going on.
 
-**Appendix** demonstrates how to rewrite the code in the Chapter 2 using classes.
+**Appendices** demonstrate some additional topics, such as how to use environments to 
+define Lua modules, classes, and so on.
 
 I realize that the length of the tutorial - almost 30 parts -
 is probably a bit too much. On the other hand,
@@ -37,11 +32,19 @@ Basic programming experience is assumed.
 Familiarity with Lua and LÖVE is beneficial but not necessary.
 Some non-obvious Lua idioms are briefly explained.
 
+The code can be downloaded using `git` 
+```
+cd /your-path/
+git clone https://github.com/noooway/love2d_arkanoid_tutorial
+```
+or by Github's "Clone or download" -> "Download ZIP" button.
+
 Each step can be run with the LÖVE interpreter by issuing a `love` 
 command followed by the folder name, for example
-
-    cd /your-path/love2d_arkanoid_tutorial
-    love 1-01_TheBallTheBrickThePlatform 
+```
+cd /your-path/love2d_arkanoid_tutorial
+love 1-01_TheBallTheBrickThePlatform 
+```
 
 One last thing before we start: feedback is crucial.
 If you have any critique, suggestions, improvements or just any other ideas, let me know. 
@@ -60,37 +63,16 @@ Contents:
 
 **Chapter 2: Common Features**  
 
-1. Splitting Code into Several Files ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Splitting-Code-Into-Different-Files))  
-2. Loading Levels from Files ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Loading-Levels-From-Files))
-3. Straightforward Gamestates ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Straightforward-Gamestates))  
-4. Basic Tiles([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Tiles))
-5. Different Brick Types([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Different-Brick-Types))  
-6. Basic Sound([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Sound))
-7. Game Over([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over))
+1. [Splitting Code into Several Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Splitting-Code-Into-Several-Files)  
+2. [Loading Levels from Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Loading-Levels-From-Files)
+3. [Straightforward Gamestates](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Straightforward-Gamestates)  
+4. [Basic Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Tiles)
+5. [Different Brick Types](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Different-Brick-Types)  
+6. [Basic Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Sound)  
+7. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
 
 <!-- -->
 
-**Deprecated** *Chapter 2: Maintainable Code*  
-Material in this chapter is considered deprecated.
-After the "Chapter 2: Common Features" is finished, it will be removed from the TOC and will be accessible 
-only from the [Archive page](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive).
-
-1. [The Ball, The Brick, The Platform](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-01-The-Ball,-The-Brick,-The-Platform)
-2. [Splitting Code into Several Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-02-Splitting-Code-into-Several-Files)
-3. [Classes](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-03-Classes)
-4. [Other Bricks and The Walls (Container Classes)](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-04-Container-Classes)
-5. [Detecting Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-05-Detecting-Collisions)
-6. [Resolving Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-06-Resolving-Collisions)
-7. [Loading Level From External File](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-07-Loading-Level-From-External-File)
-8. [Changing Levels](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-08-Changing-Levels)
-9. [Basic Gamestates: Game and Menu](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-09-Basic-Gamestates:-Game-and-Menu)
-10. [More Gamestates: Gamepaused and Gamefinished](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-10-More-Gamestates:-Gamepaused-and-Gamefinished)
-11. [Basic Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-11-Basic-Tiles)
-12. [Different Brick Types](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-12-Different-Brick-Types)  
-13. [Basic Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-13-Basic-Sound)
-14. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Arx-14-Game-Over)
-
-<!-- -->
  **Chapter 3: Getting to the Finish Line**
 
 1. Spawning Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses))
@@ -112,7 +94,10 @@ only from the [Archive page](https://github.com/noooway/love2d_arkanoid_tutorial
 17. Packaging and Distribution ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution))
 
 <!-- -->
- **Appendix: Classes**  
+ **Additional Topics:**
+
+1. Appendix A: Defining Modules Using Environments   
+2. Appendix B: Classes
 TBA
 
 
