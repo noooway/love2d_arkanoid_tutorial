@@ -2,7 +2,7 @@ local gamepaused = {}
 
 local game_objects = {}
 
-function gamepaused.enter( ... )
+function gamepaused.enter( prev_state, ... )
    game_objects = ...
 end
 

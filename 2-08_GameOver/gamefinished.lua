@@ -11,7 +11,7 @@ function gamefinished.draw()
 end
 
 function gamefinished.keyreleased( key, code )
-   if key == "return" then      
+   if key == "return" then
       gamestates.set_state( game, { current_level = 1 } )
    elseif key == 'escape' then
       love.event.quit()

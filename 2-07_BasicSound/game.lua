@@ -11,11 +11,14 @@ function game.load( ... )
    walls.construct_walls()
 end
 
-function game.enter( ... )
+function game.enter( prev_state, ... )
    args = ...
-   if music:isPaused() then
+   if prev_state == gamepaused then
       music:resume()
-   end  
+   end
+   if prev_state == gamefinished then
+      music:rewind()
+   end
    if args.current_level then
       bricks.clear_current_level_bricks()
       levels.current_level = args.current_level
@@ -45,6 +48,7 @@ function game.keyreleased( key, code )
    if key == 'c' then
       bricks.clear_current_level_bricks()
    elseif  key == 'escape' then
+      music:pause()
       gamestates.set_state( gamepaused, { ball, platform, bricks, walls } )
    end    
 end

@@ -2,9 +2,8 @@ local gamepaused = {}
 
 local game_objects = {}
 
-function gamepaused.enter( ... )
-   game_objects = ...
-   music:pause()
+function gamepaused.enter( prev_state, ... )
+   game_objects = ...   
 end
 
 function gamepaused.update( dt )
