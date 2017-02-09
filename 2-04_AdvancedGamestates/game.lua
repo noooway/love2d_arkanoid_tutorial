@@ -12,7 +12,7 @@ function game.load( prev_state, ... )
 end
 
 function game.enter( prev_state, ... )
-   args = ...
+   local args = ...
    if args.current_level then
       levels.current_level = args.current_level
       local level = levels.require_current_level()

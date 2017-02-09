@@ -12,7 +12,7 @@ function game.load( prev_state, ... )
 end
 
 function game.enter( prev_state, ... )
-   args = ...
+   local args = ...
    if args.current_level then
       bricks.clear_current_level_bricks()
       levels.current_level = args.current_level

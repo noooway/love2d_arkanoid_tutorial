@@ -12,7 +12,7 @@ function game.load( ... )
 end
 
 function game.enter( prev_state, ... )
-   args = ...
+   local args = ...
    if prev_state == gamepaused then
       music:resume()
    end
