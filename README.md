@@ -12,13 +12,16 @@ and to provide a starting point for further modifications.
 game in the most straightforward way,
 without relying too much on any external libraries or advanced language features. 
 
-**Chapter 2** expands the prototype, introducing simple gamestates, basic graphics and sound.
+**Chapter 2** expands the prototype, introducing gamestates, basic graphics and sound.
+At the end of this chapter, the general frame of the game is complete. What is left
+is to fill it with the details. 
 
-**Chapter 3** proceeds to add details to achieve a full-featured game. 
+**Chapter 3** proceeds to add functionality to achieve a full-featured game. 
 I'm deliberately going to try to make 
 articles in this chapter short, only sketching a general idea of what is going on.
+*Warning: the code for this chapter requires major rewrite.*
 
-**Appendices** demonstrate some additional topics, such as how to use environments to 
+**Appendices** - which are not written yet :) - demonstrate some additional topics, such as how to use environments to 
 define Lua modules, classes, and so on.
 
 I realize that the length of the tutorial - almost 30 parts -
@@ -65,11 +68,12 @@ Contents:
 
 1. [Splitting Code into Several Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Splitting-Code-Into-Several-Files)  
 2. [Loading Levels from Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Loading-Levels-From-Files)
-3. [Straightforward Gamestates](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Straightforward-Gamestates)  
-4. [Basic Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Tiles)
-5. [Different Brick Types](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Different-Brick-Types)  
-6. [Basic Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Sound)  
-7. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
+3. [Straightforward Gamestates](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Straightforward-Gamestates) 
+4. [Advanced Gamestates](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Advanced-Gamestates)   
+5. [Basic Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Tiles)
+6. [Different Brick Types](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Different-Brick-Types)  
+7. [Basic Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Sound)  
+8. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
 
 <!-- -->
 
