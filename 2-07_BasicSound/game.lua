@@ -7,7 +7,7 @@ local levels = require "levels"
 
 local game = {}
 
-function game.load( ... )
+function game.load( prev_state, ... )
    walls.construct_walls()
 end
 
