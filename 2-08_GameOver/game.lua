@@ -64,11 +64,8 @@ function game.check_no_more_balls( ball, lives_display )
       lives_display.lose_life()      
       if lives_display.lives < 0 then
 	 gamestates.set_state( gameover,
-			       { ball = ball,
-				 platform = platform,
-				 bricks = bricks,
-				 walls = walls,
-				 lives_display = lives_display } )
+			       { ball, platform, bricks,
+				 walls, lives_display } )
       else
 	 ball.reposition()	 
       end
