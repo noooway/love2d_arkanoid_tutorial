@@ -1,6 +1,6 @@
 local menu = {}
 
-function menu.load( prev_state )
+function menu.load( prev_state, ... )
    music:play()
 end
 
