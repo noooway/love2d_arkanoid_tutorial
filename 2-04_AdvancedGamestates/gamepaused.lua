@@ -1,5 +1,7 @@
 local gamepaused = {}
 
+gamepaused.name = "gamepaused"
+
 local game_objects = {}
 
 function gamepaused.enter( prev_state, ... )
@@ -22,7 +24,7 @@ end
 
 function gamepaused.keyreleased( key, code )
    if key == "return" then
-      gamestates.set_state( game, {} )
+      gamestates.set_state( "game", {} )
    elseif key == 'escape' then
       love.event.quit()
    end    

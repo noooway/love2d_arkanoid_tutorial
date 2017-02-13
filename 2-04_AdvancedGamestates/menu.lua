@@ -1,5 +1,7 @@
 local menu = {}
 
+menu.name = "menu"
+
 function menu.update( dt )
 end
 
@@ -10,7 +12,7 @@ end
 
 function menu.keyreleased( key, code )
    if key == "return" then
-      gamestates.set_state( game, { current_level = 1 } )
+      gamestates.set_state( "game", { current_level = 1 } )
    elseif key == 'escape' then
       love.event.quit()
    end    
