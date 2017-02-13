@@ -1,7 +1,5 @@
 local menu = {}
 
-menu.name = "menu"
-
 function menu.update( dt )
 end
 

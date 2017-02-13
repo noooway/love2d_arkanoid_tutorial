@@ -1,7 +1,5 @@
 local gamefinished = {}
 
-gamefinished.name = "gamefinished"
-
 function gamefinished.update( dt )
 end
 

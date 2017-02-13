@@ -3,10 +3,19 @@ local gamestates = {}
 local loaded = {}
 local current_state = nil
 
+local function get_key_for_value( t, value )
+   for k,v in pairs( t ) do
+      if v == value then
+	 return k
+      end
+   end
+   return nil
+end
+
 function gamestates.set_state( state_name, ... )
    gamestates.state_event( 'exit' )
    if current_state then
-      local old_state_name = current_state.name
+      local old_state_name = get_key_for_value( loaded, current_state )
    end
    current_state = loaded[ state_name ]
    if not current_state then
