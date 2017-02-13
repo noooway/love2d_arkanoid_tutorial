@@ -54,7 +54,7 @@ function game.keyreleased( key, code )
       bricks.clear_current_level_bricks()
    elseif  key == 'escape' then
       music:pause()
-      gamestates.set_state( gamepaused,
+      gamestates.set_state( "gamepaused",
 			    { ball, platform, bricks, walls, lives_display } )
    end
 end
@@ -63,7 +63,7 @@ function game.check_no_more_balls( ball, lives_display )
    if ball.escaped_screen then
       lives_display.lose_life()      
       if lives_display.lives < 0 then
-	 gamestates.set_state( gameover,
+	 gamestates.set_state( "gameover",
 			       { ball, platform, bricks,
 				 walls, lives_display } )
       else
@@ -77,9 +77,9 @@ function game.switch_to_next_level( bricks, ball, levels )
       bricks.clear_current_level_bricks()
       if levels.current_level < #levels.sequence then
 	 gamestates.set_state(
-	    game, { current_level = levels.current_level + 1 } )
+	    "game", { current_level = levels.current_level + 1 } )
       else
-	 gamestates.set_state( gamefinished )
+	 gamestates.set_state( "gamefinished" )
       end
    end
 end
