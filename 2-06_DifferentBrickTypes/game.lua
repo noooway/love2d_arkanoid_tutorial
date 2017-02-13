@@ -13,7 +13,7 @@ end
 
 function game.enter( prev_state, ... )
    local args = ...
-   if args.current_level then
+   if args and args.current_level then
       bricks.clear_current_level_bricks()
       levels.current_level = args.current_level
       local level = levels.require_current_level()
