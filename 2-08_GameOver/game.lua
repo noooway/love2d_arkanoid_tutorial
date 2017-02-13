@@ -14,10 +14,10 @@ end
 
 function game.enter( prev_state, ... )
    local args = ...
-   if prev_state == gamepaused then
+   if prev_state == "gamepaused" then
       music:resume()
    end
-   if prev_state == gameover or prev_state == gamefinished then
+   if prev_state == "gameover" or prev_state == "gamefinished" then
       lives_display.reset()
       music:rewind()
    end

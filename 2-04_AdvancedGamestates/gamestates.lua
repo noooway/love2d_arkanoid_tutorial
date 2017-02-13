@@ -14,15 +14,14 @@ end
 
 function gamestates.set_state( state_name, ... )
    gamestates.state_event( 'exit' )
-   if current_state then
-      local old_state_name = get_key_for_value( loaded, current_state )
-   end
+   local old_state_name = get_key_for_value( loaded, current_state )
    current_state = loaded[ state_name ]
    if not current_state then
       current_state = require( state_name )
       loaded[ state_name ] = current_state
       gamestates.state_event( 'load', old_state_name, ... )
    end
+   print( old_state_name )
    gamestates.state_event( 'enter', old_state_name, ... )
 end
 
