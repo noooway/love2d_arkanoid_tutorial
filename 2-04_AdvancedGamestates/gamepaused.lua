@@ -22,7 +22,7 @@ end
 
 function gamepaused.keyreleased( key, code )
    if key == "return" then
-      gamestates.set_state( game, {} )
+      gamestates.set_state( "game" )
    elseif key == 'escape' then
       love.event.quit()
    end    

@@ -13,7 +13,7 @@ end
 
 function game.enter( prev_state, ... )
    local args = ...
-   if args.current_level then
+   if args and args.current_level then
       bricks.clear_current_level_bricks()
       levels.current_level = args.current_level
       local level = levels.require_current_level()
@@ -42,7 +42,7 @@ function game.keyreleased( key, code )
    if key == 'c' then
       bricks.clear_current_level_bricks()
    elseif  key == 'escape' then
-      gamestates.set_state( gamepaused, { ball, platform, bricks, walls } )
+      gamestates.set_state( "gamepaused", { ball, platform, bricks, walls } )
    end    
 end
 
@@ -51,9 +51,9 @@ function game.switch_to_next_level( bricks, ball, levels )
       bricks.clear_current_level_bricks()
       if levels.current_level < #levels.sequence then
 	 gamestates.set_state(
-	    game, { current_level = levels.current_level + 1 } )
+	    "game", { current_level = levels.current_level + 1 } )
       else
-	 gamestates.set_state( gamefinished )
+	 gamestates.set_state( "gamefinished" )
       end
    end
 end

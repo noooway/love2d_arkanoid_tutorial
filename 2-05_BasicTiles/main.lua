@@ -1,12 +1,4 @@
 gamestates = require "gamestates"
-menu = {}
-game = {}
-gamepaused = {}
-gamefinished = {}
-menu = require "menu"
-game = require "game"
-gamepaused = require "gamepaused"
-gamefinished = require "gamefinished"
 
 function love.load()
    local love_window_width = 800
@@ -14,7 +6,7 @@ function love.load()
    love.window.setMode( love_window_width,
                         love_window_height,
                         { fullscreen = false } )
-   gamestates.set_state( menu )
+   gamestates.set_state( "menu" )
 end
 
 function love.update( dt )
