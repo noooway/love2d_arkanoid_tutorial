@@ -1,60 +1,43 @@
-local Gamestate = require "gamestate"
-local game = game or require "game"
-local love = love
-local pairs = pairs
-local type = type
+local gamepaused = {}
 
-local gamepaused = gamepaused or {}
+local game_objects = {}
 
-if setfenv then
-   setfenv(1, gamepaused)
-else
-   _ENV = gamepaused
-end
-
-state_name = "gamepaused"
-
-function gamepaused:enter( previous_state, ... )
+function gamepaused.enter( prev_state, ... )
    game_objects = ...
 end
 
-function gamepaused:update( dt )
+function gamepaused.update( dt )
 end
 
-function gamepaused:draw()
-   for _,obj in pairs( game_objects ) do
+function gamepaused.draw()
+   for _, obj in pairs( game_objects ) do
       if type(obj) == "table" and obj.draw then
-	 obj:draw()
+	 obj.draw()
       end
    end
-   self:cast_shadow()
    love.graphics.print(
       "Game is paused. Press Enter to continue or Esc to quit",
       50, 50)
 end
 
-function gamepaused:keyreleased( key, code )
-   if key == 'return' then      
-      Gamestate.switch( game, game_objects )
-   elseif  key == 'escape' then
+function gamepaused.keyreleased( key, code )
+   if key == "return" then
+      gamestates.set_state( "game" )
+   elseif key == 'escape' then
       love.event.quit()
    end    
 end
 
-function gamepaused:leave()
-   game_objects = nil
+function gamepaused.mousereleased( x, y, button, istouch )
+   if button == 'l' or button == 1 then
+      gamestates.set_state( "game" )
+   elseif button == 'r' or button == 2 then
+      love.event.quit()
+   end   
 end
 
-function gamepaused:cast_shadow()
-   local r, g, b, a = love.graphics.getColor( )
-   love.graphics.setColor( 10, 10, 10, 100 )
-   love.graphics.rectangle("fill",
-			   0,
-			   0,
-			   love.graphics.getWidth(),
-			   love.graphics.getHeight() )
-   love.graphics.setColor( r, g, b, a )
+function gamepaused.exit()
+   game_objects = nil 
 end
-
 
 return gamepaused

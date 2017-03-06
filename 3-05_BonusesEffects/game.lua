@@ -1,146 +1,108 @@
-local Gamestate = require "gamestate"
-local gamepaused = gamepaused or require "gamepaused"
-local gamefinished = gamefinished or require "gamefinished"
-local Platform = require "Platform"
-local Ball = require "Ball"
-local BricksContainer = require "BricksContainer"
-local WallsContainer = require "WallsContainer"
-local BonusesContainer = require "BonusesContainer"
-local HC = require "HC"
-local vector = require "vector"
-local love = love
-local require = require
-local pairs = pairs
+local ball = require "ball"
+local platform = require "platform"
+local bricks = require "bricks"
+local bonuses = require "bonuses"
+local walls = require "walls"
+local lives_display = require "lives_display"
+local collisions = require "collisions"
+local levels = require "levels"
 
-local game = game or {}
+local game = {}
 
-if setfenv then
-   setfenv(1, game)
-else
-   _ENV = game
+function game.load( prev_state, ... )
+   walls.construct_walls()
 end
 
-state_name = "game"
-
-function game:enter( previous_state, ... )
-   args = ...
-
-   level_sequence = args.level_sequence or require "levels/sequence"
-   level_counter = args.level_counter or 1
-   if level_counter > #level_sequence.sequence then
-      Gamestate.switch( gamefinished )
+function game.enter( prev_state, ... )
+   local args = ...
+   if prev_state == "gamepaused" then
+      music:resume()
    end
-   level_filename = "levels/" .. level_sequence.sequence[ level_counter ]
-   level = args.level or require( level_filename )
-   collider = args.collider or HC.new()
-   ball = args.ball or Ball:new( { collider = collider } )
-   platform = args.platform or Platform:new( { collider = collider } )
-   bonuses_container = args.bonuses_container or
-      BonusesContainer:new( { collider = collider } )
-   bricks_container = args.bricks_container or
-      BricksContainer:new( { level = level,
-			     collider = collider,
-			     bonuses_container = bonuses_container } )
-   walls_container = args.walls_container or
-      WallsContainer:new( { collider = collider } )
-end
-
-function game:update( dt )
-   ball:update( dt )
-   platform:update( dt )
-   bricks_container:update( dt )
-   bonuses_container:update( dt )
-   walls_container:update( dt )
-   resolve_collisions( dt )
-   switch_to_next_level()
-end
-
-function game:draw()
-   ball:draw()
-   platform:draw()
-   bricks_container:draw()
-   bonuses_container:draw()
-   walls_container:draw()
-end
-
-function resolve_collisions( dt )
-   -- Platform
-   local collisions = collider:collisions( platform.collider_shape )
-   for another_shape, separating_vector in pairs( collisions ) do
-      if another_shape.game_object.name == "wall" then
-	 platform:react_on_wall_collision( another_shape, separating_vector )
-      elseif another_shape.game_object.name == "bonus" then
-	 local picked_bonus = another_shape.game_object
-	 if picked_bonus:is_slowdown() then
-	    ball:react_on_slow_down_bonus()
-	 elseif picked_bonus:is_accelerate() then
-	    ball:react_on_accelerate_bonus()
-	 elseif picked_bonus:is_increase() then
-	    platform:react_on_increase_bonus()
-	 elseif picked_bonus:is_decrease() then
-	    platform:react_on_decrease_bonus()
-	 end
-	 another_shape.game_object:react_on_platform_collision(
-	    platform.collider_shape,
-	    (-1) * vector( separating_vector.x, separating_vector.y ) )
-      end
+   if prev_state == "gameover" or prev_state == "gamefinished" then
+      lives_display.reset()
+      music:rewind()
    end
-   -- Ball
-   local collisions = collider:collisions( ball.collider_shape )
-   for another_shape, separating_vector in pairs( collisions ) do
-      if another_shape.game_object.name == "wall" then
-	 ball:react_on_wall_collision( another_shape, separating_vector )
-      elseif another_shape.game_object.name == "platform" then
-	 ball:react_on_platform_collision( another_shape, separating_vector )
-      elseif another_shape.game_object.name == "brick" then
-	 ball:react_on_brick_collision( another_shape, separating_vector )
-	 another_shape.game_object:react_on_ball_collision(
-	    ball.collider_shape,
-	    (-1) * vector( separating_vector.x, separating_vector.y )  )
-      end
+   if args and args.current_level then
+      bricks.clear_current_level_bricks()
+      bonuses.clear_current_level_bonuses()
+      levels.current_level = args.current_level
+      local level = levels.require_current_level()
+      bricks.construct_level( level )
+      ball.reposition()
+      platform.reset_size_to_norm()
+   end      
+end
+
+function game.update( dt )
+   ball.update( dt, platform )
+   platform.update( dt )
+   bricks.update( dt )
+   bonuses.update( dt )
+   walls.update( dt )
+   lives_display.update( dt )
+   collisions.resolve_collisions( ball, platform, walls, bricks, bonuses )
+   game.check_no_more_balls( ball, lives_display )
+   game.switch_to_next_level( bricks, levels )
+end
+
+function game.draw()
+   ball.draw()
+   platform.draw()
+   bricks.draw()
+   bonuses.draw()
+   walls.draw()
+   lives_display.draw()
+end
+
+function game.keyreleased( key, code )
+   if key == 'c' then
+      bricks.clear_current_level_bricks()
+   elseif key == ' ' then
+      ball.launch_from_platform()
+   elseif  key == 'escape' then
+      music:pause()
+      gamestates.set_state(
+	 "gamepaused",
+	 { ball, platform, bricks, bonuses, walls, lives_display } )
    end
 end
 
-function switch_to_next_level()
-   if bricks_container.no_more_bricks then
-      level_counter = level_counter + 1
-      if level_counter > #level_sequence.sequence then
-	 Gamestate.switch( gamefinished )
+function game.mousereleased( x, y, button, istouch )
+   if button == 'l' or button == 1 then
+      ball.launch_from_platform()
+   elseif button == 'r' or button == 2 then
+      music:pause()
+      gamestates.set_state(
+	 "gamepaused",
+	 { ball, platform, bricks, bonuses, walls, lives_display } )
+   end
+end
+
+function game.check_no_more_balls( ball, lives_display )
+   if ball.escaped_screen then
+      lives_display.lose_life()      
+      if lives_display.lives < 0 then
+	 gamestates.set_state( "gameover",
+			       { ball, platform, bricks,
+				 bonuses, walls, lives_display } )
       else
-	 Gamestate.switch( game, { level_sequence = level_sequence,
-				   level_counter = level_counter,
-				   collider = collider,
-				   walls_container = walls_container } )
+	 ball.reposition()
+	 platform.reset_size_to_norm()
       end
    end
 end
 
-function game:keyreleased( key, code )
-   if key == 'escape' then      
-      Gamestate.switch( gamepaused,
-			{ level_sequence = level_sequence,
-			  level_counter = level_counter,
-			  level = level,
-			  collider = collider,
-			  ball = ball,
-			  platform = platform,
-			  walls_container = walls_container,
-			  bricks_container = bricks_container,
-			  bonuses_container = bonuses_container } )
+function game.switch_to_next_level( bricks, levels )
+   if bricks.no_more_bricks then
+      bricks.clear_current_level_bricks()
+      bonuses.clear_current_level_bonuses()
+      if levels.current_level < #levels.sequence then
+	 gamestates.set_state(
+	    "game", { current_level = levels.current_level + 1 } )
+      else
+	 gamestates.set_state( "gamefinished" )
+      end
    end
-end
-
-function game:leave()
-   level_sequence = nil
-   level_counter = nil
-   level_filename = nil
-   level = nil
-   collider = nil
-   ball = nil
-   platform = nil
-   bricks_container = nil
-   walls_container = nil
-   bonuses_container = nil
 end
 
 return game
