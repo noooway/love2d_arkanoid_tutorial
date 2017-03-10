@@ -1,39 +1,30 @@
-local Gamestate = require "gamestate"
-local game = game or require "game"
-local love = love
+local gamefinished = {}
 
-local gamefinished = gamefinished or {}
-
-if setfenv then
-   setfenv(1, gamefinished)
-else
-   _ENV = gamefinished
+function gamefinished.update( dt )
 end
 
-state_name = "gamefinished"
-
-function gamefinished:enter()
+function gamefinished.draw()
+   love.graphics.print( "Congratulations!\n" ..
+			   "You have finished the game!\n" ..
+			   "Press Enter to restart or Esc to quit",
+			280, 250 )
 end
 
-function gamefinished:update( dt )
-end
-
-function gamefinished:draw()
-   love.graphics.print(
-      "Congratulations, you have finished the game.\n" ..
-	 "Press Enter to restart or Esc to quit",
-      10, 10)
-end
-
-function gamefinished:keyreleased( key, code )
-   if key == 'return' then      
-      Gamestate.switch( game, { level_counter = 1 } )
-   elseif  key == 'escape' then
+function gamefinished.keyreleased( key, code )
+   if key == "return" then
+      gamestates.set_state( "game", { current_level = 1 } )
+   elseif key == 'escape' then
       love.event.quit()
    end    
 end
 
-function gamefinished:leave()
+function gamefinished.mousereleased( x, y, button, istouch )
+   if button == 'l' or button == 1 then
+      gamestates.set_state( "game", { current_level = 1 } )
+   elseif button == 'r' or button == 2 then
+      love.event.quit()
+   end    
 end
+
 
 return gamefinished
