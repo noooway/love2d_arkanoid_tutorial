@@ -1,92 +1,97 @@
-local Gamestate = require "gamestate"
-local game = game or require "game"
-local love = love
-local Button = require "Button"
 local vector = require "vector"
+local buttons = require "buttons"
 
-local menu = menu or {}
+local menu = {}
 
-if setfenv then
-   setfenv(1, menu)
-else
-   _ENV = menu
-end
+local menu_buttons_image = love.graphics.newImage( "img/800x600/buttons.png" )
+local button_tile_width = 128
+local button_tile_height = 64
+local play_button_tile_x_pos = 0
+local play_button_tile_y_pos = 0
+local quit_button_tile_x_pos = 0
+local quit_button_tile_y_pos = 64
+local selected_x_shift = 128
+local tileset_width = 256
+local tileset_height = 128
+local play_button_quad = love.graphics.newQuad(
+   play_button_tile_x_pos,
+   play_button_tile_y_pos,
+   button_tile_width,
+   button_tile_height,
+   tileset_width,
+   tileset_height )
+local play_button_selected_quad = love.graphics.newQuad(
+   play_button_tile_x_pos + selected_x_shift,
+   play_button_tile_y_pos,
+   button_tile_width,
+   button_tile_height,
+   tileset_width,
+   tileset_height )
+local quit_button_quad = love.graphics.newQuad(
+   quit_button_tile_x_pos,
+   quit_button_tile_y_pos,
+   button_tile_width,
+   button_tile_height,
+   tileset_width,
+   tileset_height )
+local quit_button_selected_quad = love.graphics.newQuad(
+   quit_button_tile_x_pos + selected_x_shift,
+   quit_button_tile_y_pos,
+   button_tile_width,
+   button_tile_height,
+   tileset_width,
+   tileset_height )
 
-state_name = "menu"
-
-function menu:enter()
-   start_button = Button:new{
+function menu.load( prev_state, ... )
+   start_button = buttons.new_button{
       text = "New game",
-      position = vector( (800 - Button.button_tile_width) / 2, 200),
-      selected = true,
-      width = Button.button_tile_width,
-      height = Button.button_tile_height,
-      quad = love.graphics.newQuad(
-	 Button.play_button_tile_x_pos,
-	 Button.play_button_tile_y_pos,
-	 Button.button_tile_width,
-	 Button.button_tile_height,
-	 Button.tileset_width,
-	 Button.tileset_height ),
-      quad_selected = love.graphics.newQuad(
-	 Button.play_button_tile_x_pos + Button.selected_x_shift,
-	 Button.play_button_tile_y_pos,
-	 Button.button_tile_width,
-	 Button.button_tile_height,
-	 Button.tileset_width,
-	 Button.tileset_height )
+      position = vector( (800 - button_tile_width) / 2, 200),
+      width = button_tile_width,
+      height = button_tile_height,
+      image = menu_buttons_image,
+      quad = play_button_quad,
+      quad_when_selected = play_button_selected_quad
    }
-   quit_button = Button:new {
+   quit_button = buttons.new_button{
       text = "Quit",
-      position = vector( (800 - Button.button_tile_width) / 2, 310),
-      width = Button.button_tile_width,
-      height = Button.button_tile_height,
-      quad = love.graphics.newQuad(
-	 Button.quit_button_tile_x_pos,
-	 Button.quit_button_tile_y_pos,
-	 Button.button_tile_width,
-	 Button.button_tile_height,
-	 Button.tileset_width,
-	 Button.tileset_height ),
-      quad_selected = love.graphics.newQuad(
-	 Button.quit_button_tile_x_pos + Button.selected_x_shift,
-	 Button.quit_button_tile_y_pos,
-	 Button.button_tile_width,
-	 Button.button_tile_height,
-	 Button.tileset_width,
-	 Button.tileset_height )
-   }   
+      position = vector( (800 - button_tile_width) / 2, 310),
+      width = button_tile_width,
+      height = button_tile_height,
+      image = menu_buttons_image,
+      quad = quit_button_quad,
+      quad_when_selected = quit_button_selected_quad
+   }
+   music:play()
 end
 
-function menu:update(dt)
-   start_button:update()
-   quit_button:update()
+function menu.update( dt )
+   buttons.update_button( start_button, dt )
+   buttons.update_button( quit_button, dt )
 end
 
-function menu:draw()
-   start_button:draw()
-   quit_button:draw()
+function menu.draw()
+   buttons.draw_button( start_button )
+   buttons.draw_button( quit_button )
 end
 
-function menu:keyreleased( key, code )
-   if key == 'return' then      
-      Gamestate.switch( game, { level_counter = 1 } )
-   elseif  key == 'escape' then
+function menu.keyreleased( key, code )
+   if key == "return" then
+      gamestates.set_state( "game", { current_level = 1 } )
+   elseif key == 'escape' then
       love.event.quit()
    end    
 end
 
-function menu:mousereleased( x, y, button )
-   if start_button:mousereleased( x, y, button ) then
-      Gamestate.switch( game, { level_counter = 1 } )
-   elseif quit_button:mousereleased( x, y, button ) then
+function menu.mousereleased( x, y, button, istouch )
+   if button == 'l' or button == 1 then
+      if buttons.mousereleased( start_button, x, y, button ) then
+	 gamestates.set_state( "game", { current_level = 1 } )
+      elseif buttons.mousereleased( quit_button, x, y, button ) then
+	 love.event.quit()
+      end
+   elseif button == 'r' or button == 2 then
       love.event.quit()
-   end   
-end
-
-function menu:leave()
-   start_button = nil
-   quit_button = nil
+   end    
 end
 
 return menu
