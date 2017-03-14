@@ -19,7 +19,7 @@ is to fill it with the details.
 **Chapter 3** proceeds to add functionality to achieve a full-featured game. 
 I'm deliberately going to try to make 
 articles in this chapter short, only sketching a general idea of what is going on.
-*Warning: the code for this chapter requires major rewrite.*
+*Warning: the code for this chapter is in a working state, but requires some minor corrections.*
 
 **Appendices** - which are not written yet :) - demonstrate some additional topics, such as how to use environments to 
 define Lua modules, classes, and so on.
@@ -40,7 +40,7 @@ The code can be downloaded using `git`
 cd /your-path/
 git clone https://github.com/noooway/love2d_arkanoid_tutorial
 ```
-or by Github's "Clone or download" -> "Download ZIP" button.
+or by Github's ["Clone or download -> Download ZIP"](https://github.com/noooway/love2d_arkanoid_tutorial/archive/master.zip) button.
 
 Each step can be run with the LÖVE interpreter by issuing a `love` 
 command followed by the folder name, for example
@@ -81,20 +81,20 @@ Contents:
 1. Better Ball Rebounds ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Better-Ball-Rebounds))
 2. Ball Launch From Platform (Two Objects Moving Together) ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform))
 3. Mouse Controls ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Mouse-Controls))
-4. Spawning Bonuses ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses))
-5. Bonus Effects ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bonus-effects))
-6. Details: Add-New-Ball Bonus ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Details:-Add-New-Ball-Bonus))
-7. Details: Glue Bonus ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Details:-Glue-Bonus))
-8. Details: Random Bonuses ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Details:-Random-Bonuses))
-9. Menu Buttons ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Menu-Buttons))
-10. Lives and Score ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Lives-and-Score))
-11. Wall Tiles ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles))
-12. Side Panel Background ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Side-Panel-Background)
-13. Fonts in Lives and Score ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Fonts-in-Lives-and-Score))
-14. Sound ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Sound))
-15. Final Screen ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen))
-16. Game Over ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Game-Over))
-17. Packaging and Distribution ([deprecated](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution))
+4. Spawning Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses))
+5. Bonus Effects ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bonus-effects))
+6. Glue Bonus ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Glue-Bonus))
+7. Add New Ball Bonus ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus))
+8. Life and Next Level Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Life-and-Next-Level-Bonuses))  
+9. Random Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Random-Bonuses))
+10. Menu Buttons ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Menu-Buttons))
+11. Wall Tiles ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles))
+12. Side Panel ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Side-Panel))  
+13. Score ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Score))
+14. Fonts ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Fonts))
+15. More Sounds ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/More-Sounds))
+16. Final Screen ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen))
+17. Packaging and Distribution ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution))
 
 <!-- -->
 **Additional Topics:**
