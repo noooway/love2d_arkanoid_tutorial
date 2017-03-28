@@ -63,8 +63,7 @@ function ball.wall_rebound( shift_ball )
 end
 
 function ball.platform_rebound( shift_ball, platform )
-   ball.normal_rebound( shift_ball )
-   ball.rotate_speed( shift_ball, platform )
+   ball.bounce_from_sphere( shift_ball, platform )
    ball.increase_collision_counter()
    ball.increase_speed_after_collision()
 end
@@ -98,18 +97,23 @@ function ball.determine_actual_shift( shift_ball )
    return actual_shift
 end
 
-function ball.rotate_speed( shift_ball, platform )
+function ball.bounce_from_sphere( shift_ball, platform )
    local actual_shift = ball.determine_actual_shift( shift_ball )
+   ball.position = ball.position + actual_shift
+   if actual_shift.x ~= 0 then
+      ball.speed.x = -ball.speed.x
+   end
    if actual_shift.y ~= 0 then
-      local max_rotation_degrees = 30
+      local sphere_radius = 200
       local ball_center = ball.position
       local platform_center = platform.position +
 	 vector( platform.width / 2, platform.height / 2  )
       local separation = ( ball_center - platform_center )
-      local rotation_deg = separation.x / ( platform.width / 2 ) *
-	 max_rotation_degrees
-      local rotation_rad = rotation_deg / 180 * math.pi      
-      ball.speed:rotate_inplace( rotation_rad )
+      local normal_direction = vector( separation.x / sphere_radius, -1 )
+      local v_norm = ball.speed:projectOn( normal_direction )
+      local v_tan = ball.speed - v_norm
+      local reverse_v_norm = v_norm * (-1)
+      ball.speed = reverse_v_norm + v_tan
    end
 end
 
