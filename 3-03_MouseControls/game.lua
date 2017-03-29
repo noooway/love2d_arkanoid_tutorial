@@ -38,7 +38,7 @@ function game.update( dt )
    lives_display.update( dt )
    collisions.resolve_collisions( ball, platform, walls, bricks )
    game.check_no_more_balls( ball, lives_display )
-   game.switch_to_next_level( bricks, ball, levels )
+   game.switch_to_next_level( bricks, levels )
 end
 
 function game.draw()
@@ -86,7 +86,7 @@ function game.check_no_more_balls( ball, lives_display )
    end
 end
 
-function game.switch_to_next_level( bricks, ball, levels )
+function game.switch_to_next_level( bricks, levels )
    if bricks.no_more_bricks then
       bricks.clear_current_level_bricks()
       if levels.current_level < #levels.sequence then
