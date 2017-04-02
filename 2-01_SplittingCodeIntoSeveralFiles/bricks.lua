@@ -30,8 +30,8 @@ end
 
 function bricks.construct_level( level_bricks_arrangement )
    bricks.no_more_bricks = false
-   for row_index, row in pairs( level_bricks_arrangement ) do
-      for col_index, bricktype in pairs( row ) do
+   for row_index, row in ipairs( level_bricks_arrangement ) do
+      for col_index, bricktype in ipairs( row ) do
 	 if bricktype ~= 0 then
 	    local new_brick_position_x = bricks.top_left_position.x +
 	       ( col_index - 1 ) *
