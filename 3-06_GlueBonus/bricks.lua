@@ -115,12 +115,10 @@ end
 
 function bricks.brick_hit_by_ball( i, brick, shift_ball, bonuses )
    if bricks.is_simple( brick ) then
-      bonuses.add_bonus(
-	 bonuses.new_bonus(
-	    vector( brick.position.x + brick.width / 2,
-		    brick.position.y + brick.height / 2 ),
-	    brick.bonustype )
-      )
+      bonuses.generate_bonus(
+	 vector( brick.position.x + brick.width / 2,
+		 brick.position.y + brick.height / 2 ),
+	 brick.bonustype )
       table.remove( bricks.current_level_bricks, i )
       simple_break_sound:play()
    elseif bricks.is_armored( brick ) then
@@ -130,12 +128,10 @@ function bricks.brick_hit_by_ball( i, brick, shift_ball, bonuses )
       bricks.scrathed_to_cracked( brick )
       armored_hit_sound:play()
    elseif bricks.is_cracked( brick ) then
-      bonuses.add_bonus(
-	 bonuses.new_bonus(
-	    vector( brick.position.x + brick.width / 2,
-		    brick.position.y + brick.height / 2 ),
-	    brick.bonustype )
-      )
+      bonuses.generate_bonus(
+	 vector( brick.position.x + brick.width / 2,
+		 brick.position.y + brick.height / 2 ),
+	 brick.bonustype )
       table.remove( bricks.current_level_bricks, i )
       armored_break_sound:play()
    elseif bricks.is_heavyarmored( brick ) then

@@ -2,8 +2,8 @@ local vector = require "vector"
 local sign = math.sign or function(x) return x < 0 and -1 or x > 0 and 1 or 0 end
 
 local ball = {}
-local first_launch_speed = vector( -150, -300 )
-ball.platform_launch_speed = first_launch_speed:clone()
+--local first_launch_speed = vector( -150, -300 )
+ball.platform_launch_speed_magnitude = 300
 ball.speed = vector( 0, 0 )
 ball.image = love.graphics.newImage( "img/800x600/ball.png" )
 ball.x_tile_pos = 0
@@ -28,11 +28,12 @@ ball.position = platform_starting_pos +
 
 
 function ball.update( dt, platform )
-   ball.position = ball.position + ball.speed * dt
    if ball.stuck_to_platform then
       ball.follow_platform( platform )
-   end
-   ball.check_escape_from_screen()   
+   else
+      ball.position = ball.position + ball.speed * dt
+      ball.check_escape_from_screen()
+   end      
 end
 
 function ball.draw()
@@ -51,8 +52,13 @@ end
 
 function ball.launch_from_platform()
    if ball.stuck_to_platform then
-      ball.stuck_to_platform = false
-      ball.speed = ball.platform_launch_speed:clone()
+      ball.stuck_to_platform = false      
+      local sphere_radius = 200
+      --local platform_width = 108
+      local launch_direction = vector(
+	 ball.separation_from_platform_center.x / sphere_radius, -1 )      
+      ball.speed = launch_direction / launch_direction:len() *
+	 ball.platform_launch_speed_magnitude
    end
 end
 
@@ -67,22 +73,24 @@ function ball.platform_rebound( shift_ball, platform )
    ball.increase_collision_counter()
    ball.increase_speed_after_collision()
    if not platform.glued then
-      ball.normal_rebound( shift_ball )
-      ball.rotate_speed( shift_ball, platform )
+      ball.bounce_from_sphere( shift_ball, platform )
    else
-      ball.normal_rebound( shift_ball )
-      ball.rotate_speed( shift_ball, platform )
-      ball.platform_launch_speed = ball.speed:clone()
-      ball.stuck_to_platform = true      
-      ball.speed = vector( 0, 0 )
-      local platform_center = vector(
-      	 platform.position.x + platform.width / 2,
-      	 platform.position.y + platform.height / 2 )
-      local ball_center = ball.position:clone()
-      ball.separation_from_platform_center =
-      	 ball_center - platform_center
-      print( ball.separation_from_platform_center )
+      ball.stuck_to_platform = true
+      local actual_shift = ball.determine_actual_shift( shift_ball )
+      ball.position = ball.position + actual_shift
+      ball.platform_launch_speed_magnitude = ball.speed:len()
+      ball.compute_ball_platform_separation( platform )
    end
+end
+
+function ball.compute_ball_platform_separation( platform )
+   local platform_center = vector(
+      platform.position.x + platform.width / 2,
+      platform.position.y + platform.height / 2 )
+   local ball_center = ball.position:clone()
+   ball.separation_from_platform_center =
+      ball_center - platform_center
+   print( ball.separation_from_platform_center )   
 end
 
 function ball.brick_rebound( shift_ball )
@@ -114,18 +122,23 @@ function ball.determine_actual_shift( shift_ball )
    return actual_shift
 end
 
-function ball.rotate_speed( shift_ball, platform )
+function ball.bounce_from_sphere( shift_ball, platform )
    local actual_shift = ball.determine_actual_shift( shift_ball )
+   ball.position = ball.position + actual_shift
+   if actual_shift.x ~= 0 then
+      ball.speed.x = -ball.speed.x
+   end
    if actual_shift.y ~= 0 then
-      local max_rotation_degrees = 30
+      local sphere_radius = 200
       local ball_center = ball.position
       local platform_center = platform.position +
 	 vector( platform.width / 2, platform.height / 2  )
       local separation = ( ball_center - platform_center )
-      local rotation_deg = separation.x / ( platform.width / 2 ) *
-	 max_rotation_degrees
-      local rotation_rad = rotation_deg / 180 * math.pi      
-      ball.speed:rotate_inplace( rotation_rad )
+      local normal_direction = vector( separation.x / sphere_radius, -1 )
+      local v_norm = ball.speed:projectOn( normal_direction )
+      local v_tan = ball.speed - v_norm
+      local reverse_v_norm = v_norm * (-1)
+      ball.speed = reverse_v_norm + v_tan
    end
 end
 
@@ -160,7 +173,8 @@ function ball.reposition()
    ball.escaped_screen = false
    ball.collision_counter = 0
    ball.stuck_to_platform = true
-   ball.speed = vector( 0, 0 )
+   ball.separation_from_platform_center = vector(
+      ball_x_shift, -1 * platform_height / 2 - ball.radius - 1 )   
 end
 
 function ball.check_escape_from_screen()
