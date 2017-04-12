@@ -72,6 +72,20 @@ function bonuses.clear_current_level_bonuses()
    end
 end
 
+function bonuses.generate_bonus( position, bonustype )
+   if bonuses.valid_bonustype( bonustype ) then
+      bonuses.add_bonus( bonuses.new_bonus( position, bonustype ) )
+   end
+end
+
+function bonuses.valid_bonustype( bonustype )
+   if bonustype and bonustype > 10 and bonustype < 19 then
+      return true
+   else
+      return false
+   end
+end
+
 function bonuses.bonus_collected( i, bonus, ball, platform )
    if bonuses.is_slowdown( bonus ) then
       ball.react_on_slow_down_bonus()
