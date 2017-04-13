@@ -2,8 +2,8 @@ local vector = require "vector"
 local sign = math.sign or function(x) return x < 0 and -1 or x > 0 and 1 or 0 end
 
 local ball = {}
---local first_launch_speed = vector( -150, -300 )
-ball.platform_launch_speed_magnitude = 300
+local initial_launch_speed_magnitude = 300
+ball.platform_launch_speed_magnitude = initial_launch_speed_magnitude
 ball.speed = vector( 0, 0 )
 ball.image = love.graphics.newImage( "img/800x600/ball.png" )
 ball.x_tile_pos = 0
@@ -20,9 +20,10 @@ ball.collision_counter = 0
 local ball_x_shift = -28
 local platform_height = 16
 local platform_starting_pos = vector( 300, 500 )
-ball.stuck_to_platform = true
-ball.separation_from_platform_center = vector(
+local ball_platform_initial_separation = vector(
    ball_x_shift, -1 * platform_height / 2 - ball.radius - 1 )
+ball.stuck_to_platform = true
+ball.separation_from_platform_center = ball_platform_initial_separation 
 ball.position = platform_starting_pos +
    ball.separation_from_platform_center
 
@@ -53,10 +54,9 @@ end
 function ball.launch_from_platform()
    if ball.stuck_to_platform then
       ball.stuck_to_platform = false      
-      local sphere_radius = 200
-      --local platform_width = 108
+      local platform_halfwidth = 70
       local launch_direction = vector(
-	 ball.separation_from_platform_center.x / sphere_radius, -1 )      
+	 ball.separation_from_platform_center.x / platform_halfwidth, -1 )
       ball.speed = launch_direction / launch_direction:len() *
 	 ball.platform_launch_speed_magnitude
    end
@@ -173,8 +173,8 @@ function ball.reposition()
    ball.escaped_screen = false
    ball.collision_counter = 0
    ball.stuck_to_platform = true
-   ball.separation_from_platform_center = vector(
-      ball_x_shift, -1 * platform_height / 2 - ball.radius - 1 )   
+   ball.platform_launch_speed_magnitude = initial_launch_speed_magnitude
+   ball.separation_from_platform_center = ball_platform_initial_separation 
 end
 
 function ball.check_escape_from_screen()
