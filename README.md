@@ -6,8 +6,6 @@ An Arkanoid, while simple, contains many elements found in more elaborate games.
 My aim is to introduce a typical code structure,
 and to provide a starting point for further modifications.
 
-*Warning: the tutorial is work in progress. Some content may change in the future.*
-
 **Chapter 1** describes how to build a prototype for an Arkanoid-type 
 game in the most straightforward way,
 without relying too much on any external libraries or advanced language features. 
@@ -17,8 +15,8 @@ At the end of this chapter, the general frame of the game is complete. What is l
 is to fill it with the details. 
 
 **Chapter 3** proceeds to add functionality to achieve a full-featured game. 
-I'm deliberately going to try to make 
-articles in this chapter short, only sketching a general idea of what is going on.
+While the first two chapters are rather general, material in this chapter is mostly 
+specific for Arkanoid-type games.
 *Warning: the code for this chapter is in a working state, but requires some minor corrections.*
 
 **Appendices** - which are not written yet :) - demonstrate some additional topics, such as how to use environments to 
@@ -54,7 +52,7 @@ If you have any critique, suggestions, improvements or just any other ideas, let
 
 Contents:
 
-**Chapter 1: Building The Prototype**  
+**Chapter 1: Building Prototype**  
 
 1. [The Ball, The Brick, The Platform](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/The-Ball,-The-Brick,-The-Platform)
 2. [Bricks and Walls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bricks-and-Walls)
@@ -64,7 +62,7 @@ Contents:
 
 <!-- -->
 
-**Chapter 2: Common Features**  
+**Chapter 2: General Code Structure**  
 
 1. [Splitting Code into Several Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Splitting-Code-Into-Several-Files)  
 2. [Loading Levels from Files](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Loading-Levels-From-Files)
@@ -76,15 +74,15 @@ Contents:
 8. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
 
 <!-- -->
- **Chapter 3: Getting to the Finish Line**
+ **Chapter 3: Adding Details**
 
-1. Better Ball Rebounds ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Better-Ball-Rebounds))
-2. Ball Launch From Platform (Two Objects Moving Together) ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform))
-3. Mouse Controls ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Mouse-Controls))
-4. Spawning Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses))
-5. Bonus Effects ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bonus-effects))
-6. Glue Bonus ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Glue-Bonus))
-7. Add New Ball Bonus ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus))
+1. [Better Ball Rebounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Better-Ball-Rebounds)
+2. [Ball Launch From Platform (Two Objects Moving Together)](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform)
+3. [Mouse Controls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Mouse-Controls)
+4. [Spawning Bonuses](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses)
+5. [Bonus Effects](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bonus-effects)
+6. [Glue Bonus](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Glue-Bonus)
+7. [Add New Ball Bonus](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus)
 8. Life and Next Level Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Life-and-Next-Level-Bonuses))  
 9. Random Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Random-Bonuses))
 10. Menu Buttons ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Menu-Buttons))
@@ -105,4 +103,4 @@ Contents:
 TBA
 
 [Acknowledgements](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Acknowledgements)  
-[Archive](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive)  
+[Archive](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive)
