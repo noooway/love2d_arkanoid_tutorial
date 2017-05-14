@@ -174,7 +174,7 @@ function ball.reposition()
    ball.collision_counter = 0
    ball.stuck_to_platform = true
    ball.platform_launch_speed_magnitude = initial_launch_speed_magnitude
-   ball.separation_from_platform_center = ball_platform_initial_separation 
+   ball.separation_from_platform_center = ball_platform_initial_separation
 end
 
 function ball.check_escape_from_screen()
