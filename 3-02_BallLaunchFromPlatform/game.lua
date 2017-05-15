@@ -52,7 +52,7 @@ end
 function game.keyreleased( key, code )
    if key == 'c' then
       bricks.clear_current_level_bricks()
-   elseif key == ' ' then
+   elseif key == 'space' or key == ' ' then
       ball.launch_from_platform()
    elseif  key == 'escape' then
       music:pause()
