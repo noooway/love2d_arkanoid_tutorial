@@ -108,21 +108,21 @@ function walls.draw_wall( single_wall )
 	 end
       end
    end
-   love.graphics.rectangle( 'line',
-			    single_wall.position.x,
-			    single_wall.position.y,
-			    single_wall.width,
-			    single_wall.height )
+--   love.graphics.rectangle( 'line',
+--			    single_wall.position.x,
+--			    single_wall.position.y,
+--			    single_wall.width,
+--			    single_wall.height )
    local r, g, b, a = love.graphics.getColor( )   
    love.graphics.setColor( 255, 0, 0, 100 )
    if single_wall.next_level_bonus then
       love.graphics.setColor( 0, 0, 255, 100 )
    end
-   love.graphics.rectangle( 'fill',
-			    single_wall.position.x,
-			    single_wall.position.y,
-			    single_wall.width,
-			    single_wall.height )
+--   love.graphics.rectangle( 'fill',
+--			    single_wall.position.x,
+--			    single_wall.position.y,
+--			    single_wall.width,
+--			    single_wall.height )
    love.graphics.setColor( r, g, b, a )
 end
 

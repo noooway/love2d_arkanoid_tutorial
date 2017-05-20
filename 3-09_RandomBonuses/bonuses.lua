@@ -140,11 +140,7 @@ function bonuses.is_next_level( single_bonus )
 end
 
 function bonuses.bonustype_denotes_random( bonustype )
-   local answer = false
-   if bonustype == 0 then
-      answer = true
-   end
-   return answer
+   return bonustype == 0
 end
 
 function bonuses.generate_bonus( position, bonustype )
