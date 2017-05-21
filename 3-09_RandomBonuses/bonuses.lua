@@ -27,13 +27,14 @@ function bonuses.draw_bonus( single_bonus )
 	 single_bonus.quad, 
 	 single_bonus.position.x - bonuses.tile_width / 2,
 	 single_bonus.position.y - bonuses.tile_height / 2 )
+   else
+      local segments_in_circle = 16
+      love.graphics.circle( 'line',
+			    single_bonus.position.x,
+			    single_bonus.position.y,
+			    bonuses.radius,
+			    segments_in_circle )
    end
-   local segments_in_circle = 16
-   love.graphics.circle( 'line',
-			 single_bonus.position.x,
-			 single_bonus.position.y,
-			 bonuses.radius,
-			 segments_in_circle )
 end
 
 function bonuses.bonustype_to_quad( bonustype )
