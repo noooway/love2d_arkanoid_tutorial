@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="random_spawns.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="376.93738"
+     inkscape:cy="173.54212"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:object-paths="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="958"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="235.23654"
+       y="447.32013"
+       id="text3821"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3823"
+         x="235.23654"
+         y="447.32013">No bonus</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3116"
+       d="m 93.57143,141.07647 497.14286,0"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3118"
+       d="m 94.10714,141.07647 0,27.59013"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 590.10714,141.07647 0,27.59013"
+       id="path3120"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 434.3458,141.07647 0,27.59013"
+       id="path3126"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 578.10714,141.07647 0,27.59013"
+       id="path3142"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3180"
+       y="185.44797"
+       x="220.5"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="185.44797"
+         x="220.5"
+         id="tspan3182"
+         sodipodi:role="line">No bonus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="492.02054"
+       y="185.20187"
+       id="text3284"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3286"
+         x="494.24905"
+         y="185.20187">Common </tspan><tspan
+         sodipodi:role="line"
+         x="492.02054"
+         y="202.70187"
+         id="tspan3288">bonus</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="586.88733"
+       y="185.44797"
+       id="text3290"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3292"
+         x="586.88733"
+         y="185.44797">Valuable</tspan><tspan
+         sodipodi:role="line"
+         x="586.88733"
+         y="202.94797"
+         id="tspan3294">bonus</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4090"
+       d="m 106.86432,407.86446 497.14286,0"
+       style="fill:none;stroke:#000000;stroke-width:1.01341248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4092"
+       d="m 107.40003,429.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 114.40003,408.02586 0,-16.68346"
+       id="path4094"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4096"
+       d="m 121.40003,408.02586 0,-16.68346"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4098"
+       d="m 134.14357,396.62264 292.59372,0"
+       style="fill:none;stroke:#000000;stroke-width:1.05356944;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.05356941, 8.42855526;stroke-dashoffset:0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 439.40003,429.33678 0,-37.99438"
+       id="path4128"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4130"
+       d="m 447.40003,429.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 595.40003,429.33678 0,-37.99438"
+       id="path4132"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4134"
+       d="m 603.40003,429.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.01341248;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.01341246, 8.10729966;stroke-dashoffset:0"
+       d="m 460.33386,398.25867 122.99764,0"
+       id="path4136"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4138"
+       y="381.12698"
+       x="95.071068"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="381.12698"
+         x="95.071068"
+         id="tspan4140"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4142"
+       y="381.12698"
+       x="109.07108"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="381.12698"
+         x="109.07108"
+         id="tspan4144"
+         sodipodi:role="line">2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4150"
+       y="380.92874"
+       x="446.79901"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="380.92874"
+         x="446.79901"
+         id="tspan4152"
+         sodipodi:role="line">360</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="411.4437"
+       y="380.92874"
+       id="text4154"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4156"
+         x="411.4437"
+         y="380.92874">359</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4158"
+       y="380.92874"
+       x="603.94971"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="380.92874"
+         x="603.94971"
+         id="tspan4160"
+         sodipodi:role="line">400</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="567.22894"
+       y="380.92874"
+       id="text4162"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4164"
+         x="567.22894"
+         y="380.92874">399</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4166"
+       y="447.07404"
+       x="515.11243"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="447.07404"
+         x="517.34094"
+         id="tspan4168"
+         sodipodi:role="line">Common </tspan><tspan
+         id="tspan4170"
+         y="464.57404"
+         x="515.11243"
+         sodipodi:role="line">bonus</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4172"
+       y="447.32013"
+       x="635.67767"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="447.32013"
+         x="635.67767"
+         id="tspan4174"
+         sodipodi:role="line">Valuable</tspan><tspan
+         id="tspan4176"
+         y="464.82013"
+         x="635.67767"
+         sodipodi:role="line">bonus</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.71055293px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 116.86432,583.86446 244.4002,0"
+       id="path4178"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 117.40003,605.33678 0,-37.99438"
+       id="path4180"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4188"
+       d="m 361.40003,605.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="111.07107"
+       y="556.56042"
+       id="text4198"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4200"
+         x="111.07107"
+         y="556.56042">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="162.25285"
+       y="556.56042"
+       id="text4202"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4204"
+         x="162.25285"
+         y="556.56042">2</tspan><tspan
+         sodipodi:role="line"
+         x="162.25285"
+         y="574.06042"
+         id="tspan4308" /></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4274"
+       d="m 166.20003,605.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 215.00003,605.33678 0,-37.99438"
+       id="path4276"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4278"
+       d="m 263.80002,605.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 312.60005,605.33678 0,-37.99438"
+       id="path4280"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="123"
+       y="380.92874"
+       id="text4286"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4288"
+         x="123"
+         y="380.92874">3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4292"
+       y="556.36218"
+       x="210.96295"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="556.36218"
+         x="210.96295"
+         id="tspan4294"
+         sodipodi:role="line">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="257.85764"
+       y="556.56042"
+       id="text4296"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4298"
+         x="257.85764"
+         y="556.56042">4</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4300"
+       y="556.36218"
+       x="308.74887"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="556.36218"
+         x="308.74887"
+         id="tspan4302"
+         sodipodi:role="line">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="225.07108"
+       y="491.12698"
+       id="text4304"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4306"
+         x="225.07108"
+         y="491.12698" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="357.5"
+       y="556.36218"
+       id="text4310"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4312"
+         x="357.5"
+         y="556.36218">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="76"
+       y="626.36218"
+       id="text4314"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4316"
+         x="76"
+         y="626.36218">Slowdown</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="148.5"
+       y="645.57751"
+       id="text4318"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4320"
+         x="148.5"
+         y="645.57751">Glue</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="183.5"
+       y="626.14685"
+       id="text4322"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4324"
+         x="183.5"
+         y="626.14685">Increase</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="237"
+       y="645.57751"
+       id="text4326"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4328"
+         x="237"
+         y="645.57751">New Ball</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="278.5"
+       y="626.36218"
+       id="text4330"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4332"
+         x="278.5"
+         y="626.36218">Accelerate</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="339"
+       y="645.36218"
+       id="text4334"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4336"
+         x="339"
+         y="645.36218">Decrease</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="180"
+       y="524.36218"
+       id="text4338"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4340"
+         x="180"
+         y="524.36218"
+         style="font-size:18px">If common:</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4342"
+       d="m 536.86432,583.86446 47.68574,0"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4344"
+       d="m 537.40003,605.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4348"
+       y="556.56042"
+       x="531.07104"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="556.56042"
+         x="531.07104"
+         id="tspan4350"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4352"
+       y="556.56042"
+       x="582.25287"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="556.56042"
+         x="582.25287"
+         id="tspan4354"
+         sodipodi:role="line">2</tspan><tspan
+         id="tspan4356"
+         y="574.06042"
+         x="582.25287"
+         sodipodi:role="line" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 586.20003,605.33678 0,-37.99438"
+       id="path4358"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4406"
+       y="524.36218"
+       x="508"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         style="font-size:18px"
+         y="524.36218"
+         x="508"
+         id="tspan4408"
+         sodipodi:role="line">If valuable:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="478"
+       y="626.36218"
+       id="text4410"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4412"
+         x="478"
+         y="626.36218">Next Level</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="580"
+       y="626.36218"
+       id="text4414"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4416"
+         x="580"
+         y="626.36218">Add Life</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4420"
+       y="875.32013"
+       x="226.23654"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="875.32013"
+         x="226.23654"
+         id="tspan4422"
+         sodipodi:role="line">No bonus</tspan></text>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1.01341248px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 97.86432,835.86446 497.14286,0"
+       id="path4424"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 98.40003,857.33678 0,-37.99438"
+       id="path4426"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:connector-curvature="0"
+       id="path4428"
+       d="m 105.40003,836.02586 0,-16.68346"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 112.40003,836.02586 0,-16.68346"
+       id="path4430"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1.05356944;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.05356941, 8.42855526;stroke-dashoffset:0"
+       d="m 125.14357,824.62264 292.59372,0"
+       id="path4432"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:connector-curvature="0"
+       id="path4434"
+       d="m 430.40003,857.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 438.40003,857.33678 0,-37.99438"
+       id="path4436"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:connector-curvature="0"
+       id="path4438"
+       d="m 586.40003,857.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 594.40003,857.33678 0,-37.99438"
+       id="path4440"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:connector-curvature="0"
+       id="path4442"
+       d="m 502.12548,826.25867 72.20602,0"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1,8;stroke-dashoffset:0" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="86.071068"
+       y="809.12701"
+       id="text4444"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4446"
+         x="86.071068"
+         y="809.12701">1</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="100.07108"
+       y="809.12701"
+       id="text4448"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4450"
+         x="100.07108"
+         y="809.12701">2</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="437.79901"
+       y="808.92877"
+       id="text4452"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4454"
+         x="437.79901"
+         y="808.92877">719</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4456"
+       y="808.92877"
+       x="402.4437"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="808.92877"
+         x="402.4437"
+         id="tspan4458"
+         sodipodi:role="line">718</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="594.94971"
+       y="808.92877"
+       id="text4460"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4462"
+         x="594.94971"
+         y="808.92877">800</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4464"
+       y="808.92877"
+       x="558.22894"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="808.92877"
+         x="558.22894"
+         id="tspan4466"
+         sodipodi:role="line">799</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4480"
+       y="808.92877"
+       x="114"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="808.92877"
+         x="114"
+         id="tspan4482"
+         sodipodi:role="line">3</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4484"
+       y="875.36218"
+       x="598"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="875.36218"
+         x="598"
+         id="tspan4486"
+         sodipodi:role="line">Add Life</tspan></text>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4488"
+       y="895.36218"
+       x="574"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="895.36218"
+         x="574"
+         id="tspan4490"
+         sodipodi:role="line">Next Level</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4492"
+       d="m 486.40003,857.33678 0,-37.99438"
+       style="fill:none;stroke:#000000;stroke-width:1.22051156;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       sodipodi:linespacing="125%"
+       id="text4494"
+       y="876.36218"
+       x="426"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="876.36218"
+         x="426"
+         id="tspan4496"
+         sodipodi:role="line">Slowdown</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4498"
+       y="808.92877"
+       x="479.79901"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="/home/noway/projects/terrible_mess_games/arkanoid/code/doc/img/3-09_two_dice_rolls.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="808.92877"
+         x="479.79901"
+         id="tspan4500"
+         sodipodi:role="line">732</tspan></text>
+  </g>
+</svg>

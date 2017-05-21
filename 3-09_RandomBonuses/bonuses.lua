@@ -163,22 +163,27 @@ end
 local bonustype_rng = love.math.newRandomGenerator( os.time() )
 
 function bonuses.random_bonustype()
-   -- once in 5 levels (~400 blocks): L or N
-   -- once in 10 blocks - any others with roughly equal prob
    local bonustype
-   local common_bonuses = { 11, 12, 13, 14, 15, 16 }
-   local prob = bonustype_rng:random( 402 )
-   print( 'rnd_bonus: ', prob )
-   if prob == 402 then
-      bonustype = 18
-   elseif prob == 401 then
-      bonustype = 17
-   elseif prob > 360 then
-      bonustype = common_bonuses[ math.ceil( (prob - 360) / 7 ) ]
+   local prob = bonustype_rng:random( 400 )
+   if prob == 400 then
+      bonustype = bonuses.choose_random_valuable_bonus()
+   elseif prob >= 360 then
+      bonustype = bonuses.choose_random_common_bonus()
    else
       bonustype = nil
    end
    return bonustype
+end
+
+function bonuses.choose_random_valuable_bonus()
+   local valuable_bonustypes = { 17, 18 }
+   return valuable_bonustypes[
+      bonustype_rng:random( #valuable_bonustypes )]
+end
+
+function bonuses.choose_random_common_bonus()
+   local common_bonustypes = { 11, 12, 13, 14, 15, 16 }
+   return common_bonustypes[ bonustype_rng:random( #common_bonustypes )]
 end
 
 return bonuses
