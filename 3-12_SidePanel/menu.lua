@@ -42,6 +42,9 @@ local quit_button_selected_quad = love.graphics.newQuad(
    tileset_width,
    tileset_height )
 
+local start_button = {}
+local quit_button = {}
+
 function menu.load( prev_state, ... )
    start_button = buttons.new_button{
       text = "New game",
