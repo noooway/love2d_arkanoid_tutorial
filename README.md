@@ -1,5 +1,16 @@
 This tutorial describes how to write a more or less full-featured [Arkanoid](https://en.wikipedia.org/wiki/Arkanoid) ([Breakout](https://en.wikipedia.org/wiki/Breakout_%28video_game%29)) clone. 
 
+Here are several screenshots from various stages of the development process:
+<p align="center">
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/The-Ball,-The-Brick,-The-Platform"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/1-01.png" width="300"/></a>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/1-05.png" width="300"/></a>
+<br>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-07.png" width="300"/></a>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-11.png" width="300"/></a>
+<br>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-17.png" width="300"/></a>
+</p>
+
 The intended audience are people, who have basic programming experience, but have
 trouble structuring their code for projects bigger than "Hello World".
 An Arkanoid, while simple, contains many elements found in more elaborate games.
@@ -48,17 +59,19 @@ love 1-01_TheBallTheBrickThePlatform
 ```
 
 One last thing before we start: feedback is crucial.
-If you have any critique, suggestions, improvements or just any other ideas, let me know. 
+If you have any critique, suggestions, improvements or just any other ideas, please let me know. 
 
 Contents:
 
-**Chapter 1: Building Prototype**  
+**Chapter 1: Prototype**  
 
 1. [The Ball, The Brick, The Platform](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/The-Ball,-The-Brick,-The-Platform)
 2. [Bricks and Walls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bricks-and-Walls)
 3. [Detecting Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Detecting-Collisions)
 4. [Resolving Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Resolving-Collisions)
 5. [Levels](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels)
+
+&nbsp;&nbsp;&nbsp; Appendix A: [Storing Levels as Strings](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Storing-Levels-as-Strings)  
 
 <!-- -->
 
@@ -73,8 +86,12 @@ Contents:
 7. [Basic Sound](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Basic-Sound)  
 8. [Game Over](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Over)
 
+&nbsp;&nbsp;&nbsp; Appendix B: Stricter Modules  
+&nbsp;&nbsp;&nbsp; Appendix C-1: Intro to Classes  
+&nbsp;&nbsp;&nbsp; Appendix C-2: Chapter 2 Using Classes.  
+
 <!-- -->
- **Chapter 3: Adding Details**
+ **Chapter 3: Details**
 
 1. [Better Ball Rebounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Better-Ball-Rebounds)
 2. [Ball Launch From Platform (Two Objects Moving Together)](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform)
@@ -83,12 +100,12 @@ Contents:
 5. [Bonus Effects](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bonus-effects)
 6. [Glue Bonus](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Glue-Bonus)
 7. [Add New Ball Bonus](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus)
-8. Life and Next Level Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Life-and-Next-Level-Bonuses))  
-9. Random Bonuses ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Random-Bonuses))
-10. Menu Buttons ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Menu-Buttons))
-11. Wall Tiles ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles))
-12. Side Panel ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Side-Panel))  
-13. Score ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Score))
+8. [Life and Next Level Bonuses](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Life-and-Next-Level-Bonuses)
+9. [Random Bonuses](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Random-Bonuses)
+10. [Menu Buttons](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Menu-Buttons)
+11. [Wall Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles)
+12. [Side Panel](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Side-Panel)  
+13. [Score](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Score)
 14. Fonts ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Fonts))
 15. More Sounds ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/More-Sounds))
 16. Final Screen ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen))
@@ -97,10 +114,8 @@ Contents:
 <!-- -->
 **Additional Topics:**
 
-1. Appendix A: Defining Modules Using Environments  
-2. Appendix B-1: Intro to Classes 
-3. Appendix B-2: Chapter 2 Using Classes.  
-TBA
+1. Spreading the Word ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spreading-the-Word))  
+2. Finding a Team 
 
 [Acknowledgements](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Acknowledgements)  
-[Archive](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive)
+[Archive](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive)  
