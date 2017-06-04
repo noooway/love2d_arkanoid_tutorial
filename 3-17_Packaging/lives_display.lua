@@ -7,7 +7,7 @@ lives_display.lives_added_from_score = 0
 local position = vector( 620, 500 )
 local width = 170
 local height = 65
-local separation = 35
+
 local bungee_font = love.graphics.newFont(
    "/fonts/Bungee_Inline/BungeeInline-Regular.ttf", 30 )
 
