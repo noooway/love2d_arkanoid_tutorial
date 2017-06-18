@@ -9,151 +9,199 @@ bungee_font_links = love.graphics.newFont(
    "/fonts/Bungee_Inline/BungeeInline-Regular.ttf", 18 )
 bungee_font_soundeffects = love.graphics.newFont(
    "/fonts/Bungee_Inline/BungeeInline-Regular.ttf", 13 )
+bungee_font_thanks = love.graphics.newFont(
+   "/fonts/Bungee_Inline/BungeeInline-Regular.ttf", 12 )
+
+local section_start_y = 280
+local section_width = 250
+local section_line_height = 25
 
 function gamefinished.load( prev_state, ... )
-   gamecode_button = buttons_with_url.new_button{
-      text = "Game code by noway",
-      url = "https://github.com/noooway/love2d_arkanoid_tutorial",
-      position = vector( 10, 310 ),
-      width = 260,
-      height = 30      
+   code_section = buttons_with_url.new_layout{
+      position = vector( 5, section_start_y ),
+      default_width = section_width,
+      default_height = section_line_height,
+      default_offset = vector( 0, 8 )	 
    }
-   love_button = buttons_with_url.new_button{
-      text = "Love2d framework by the Love Team",
-      url = "http://love2d.org/",
-      position = vector( 10, 350 ),
-      width = 260,
-      height = 50      
+   buttons_with_url.add_to_layout(
+      code_section,
+      buttons_with_url.new_button{
+	 text = "Game code by noway",
+	 url = "https://github.com/noooway/love2d_arkanoid_tutorial",
+	 font = bungee_font_links,
+	 positioning = "auto",
+	 sizing = "auto"
+   })
+   buttons_with_url.add_to_layout(
+      code_section,
+      buttons_with_url.new_button{
+	 text = "Love2d framework by Love Team",
+	 url = "http://love2d.org/",
+	 positioning = "auto",
+	 width = code_section.default_width,
+	 height = 2 * code_section.default_height,
+	 font = bungee_font_links
+   })
+   buttons_with_url.add_to_layout(
+      code_section,   
+      buttons_with_url.new_button{
+	 text = "Vector library from HUMP by vrld",
+	 url = "https://github.com/vrld/hump",
+	 positioning = "auto",
+	 width = code_section.default_width,
+	 height = 2 * code_section.default_height,
+	 font = bungee_font_links
+   })
+
+   graphics_section = buttons_with_url.new_layout{
+      position = vector( 278, section_start_y ),
+      default_width = section_width,
+      default_height = section_line_height,
+      default_offset = vector( 0, 8 )
    }
-   vector_button = buttons_with_url.new_button{
-      text = "Vector library from HUMP by vrld",
-      url = "https://github.com/vrld/hump",
-      position = vector( 10, 410 ),
-      width = 260,
-      height = 50
-   }
-   tileset_button = buttons_with_url.new_button{
-      text = "Game Tileset by noway",
-      url = "http://opengameart.org/content/arcanoid-starter-set",
-      position = vector( 280, 310 ),
-      width = 260,
-      height = 30      
-   }
-   bungeefont_button = buttons_with_url.new_button{
-      text = "Bungee Inline font by David Jonathan Ross",
-      url = "https://fonts.google.com/specimen/Bungee",
-      position = vector( 280, 350 ),
-      width = 260,
-      height = 50      
-   }
-   bart_button = buttons_with_url.new_button{
-      text = "bart",
-      url = "http://opengameart.org/content/33-metal-clang-sounds-cast-iron-pans",
-      position = vector( 570, 360 ),
-      width = 59,
-      height = 20
-   }
-   ngruber_button = buttons_with_url.new_button{
-      text = "ngruber",
-      url = "https://www.freesound.org/people/ngruber/sounds/204777/#",
-      position = vector( 570, 380 ),
-      width = 89,
-      height = 20
-   }
-   tinyworlds_button = buttons_with_url.new_button{
-      text = "TinyWorlds",
-      url = "http://opengameart.org/content/break-pumpkin",
-      position = vector( 570, 400 ),
-      width = 118,
-      height = 20
-   }
-   edgardedition_button = buttons_with_url.new_button{
-      text = "EdgardEdition",
-      url = "https://www.freesound.org/people/EdgardEdition/sounds/114201/",
-      position = vector( 570, 420 ),
-      width = 144,
-      height = 20
-   }
-   cmusounddesign_button = buttons_with_url.new_button{
-      text = "cmusounddesign",
-      url = "https://www.freesound.org/people/cmusounddesign/sounds/84536/",
-      position = vector( 570, 440 ),
-      width = 154,
-      height = 20
-   }
-   qubodup_button = buttons_with_url.new_button{
-      text = "Iwan 'qubodup' Gabovitch",
-      url = "http://opengameart.org/users/qubodup",
-      position = vector( 570, 460 ),
-      width = 228,
-      height = 20
-   }
+   buttons_with_url.add_to_layout(
+      graphics_section,   
+      buttons_with_url.new_button{
+	 text = "Game Tileset by noway",
+	 url = "http://opengameart.org/content/arcanoid-starter-set",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_links
+   })
+   buttons_with_url.add_to_layout(
+      graphics_section,   
+      buttons_with_url.new_button{
+	 text = "Bungee Inline font by David Jonathan Ross",
+	 url = "https://fonts.google.com/specimen/Bungee",
+	 positioning = "auto",
+	 width = graphics_section.default_width,
+	 height = 2 * graphics_section.default_height,
+	 font = bungee_font_links
+   })
+
+
+   sound_effects_section = buttons_with_url.new_layout{
+      position = vector( 580, 335 ),
+      default_width = 260,
+      default_height = 20,
+      default_offset = vector( 0, 0 )
+   }   
+   buttons_with_url.add_to_layout(      
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "bart",
+	 url = "http://opengameart.org/content/33-metal-clang-sounds-cast-iron-pans",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   buttons_with_url.add_to_layout(
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "ngruber",
+	 url = "https://www.freesound.org/people/ngruber/sounds/204777/#",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   buttons_with_url.add_to_layout(
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "TinyWorlds",
+	 url = "http://opengameart.org/content/break-pumpkin",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   buttons_with_url.add_to_layout(
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "EdgardEdition",
+	 url = "https://www.freesound.org/people/EdgardEdition/sounds/114201/",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   buttons_with_url.add_to_layout(
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "cmusounddesign",
+	 url = "https://www.freesound.org/people/cmusounddesign/sounds/84536/",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   buttons_with_url.add_to_layout(
+      sound_effects_section,
+      buttons_with_url.new_button{
+	 text = "Iwan 'qubodup' Gabovitch",
+	 url = "http://opengameart.org/users/qubodup",
+	 positioning = "auto",
+	 sizing = "auto",
+	 font = bungee_font_soundeffects,
+	 text_align = "left"
+   })
+   
    music_button = buttons_with_url.new_button{
-      text = "Music by\n Section 31 -Tech",
-      url = "http://opengameart.org/content/night-prowler",
-      position = vector( 570, 500 ),
-      width = 200,
-      height = 50
+	 text = "Music by\n Section 31 -Tech",
+	 url = "http://opengameart.org/content/night-prowler",
+	 position = vector( 570, 465 ),
+	 width = 200,
+	 height = 50,
+	 font = bungee_font_links
+   }
+   thanks_button = buttons_with_url.new_button{           
+      text = "Thanks to Ivan, Zorg, Pgimeno, Airstruck, Positive07, Germanunkol from LOVE forums for early critique and discussion. Special thanks to Ivan, whose advice and suggestions have significantly influenced the structure of the game code.",
+      url = "https://love2d.org/forums/viewtopic.php?f=14&t=83240",
+      position = vector( 100, 530 ),
+      width = 600,
+      height = 50,
+      font = bungee_font_thanks
    }
 end
 
 function gamefinished.update( dt )
-   buttons_with_url.update_button( gamecode_button, dt )
-   buttons_with_url.update_button( love_button, dt )
-   buttons_with_url.update_button( vector_button, dt )
-   buttons_with_url.update_button( tileset_button, dt )
-   buttons_with_url.update_button( bungeefont_button, dt )
-   buttons_with_url.update_button( cmusounddesign_button, dt )
-   buttons_with_url.update_button( ngruber_button, dt )
-   buttons_with_url.update_button( bart_button, dt )
-   buttons_with_url.update_button( qubodup_button, dt )
-   buttons_with_url.update_button( tinyworlds_button, dt )
-   buttons_with_url.update_button( edgardedition_button, dt )
+   buttons_with_url.update_layout( code_section, dt )
+   buttons_with_url.update_layout( graphics_section, dt )
+   buttons_with_url.update_layout( sound_effects_section, dt )
    buttons_with_url.update_button( music_button, dt )
+   buttons_with_url.update_button( thanks_button, dt )
 end
 
 function gamefinished.draw()
    local oldfont = love.graphics.getFont()
    love.graphics.setFont( bungee_font )
    love.graphics.printf( "Congratulations!",
-			 235, 70, 350, "center" )
+			 0, 55, love.graphics.getWidth(), "center" )
    love.graphics.printf( "You have finished the game!",
-			 100, 110, 600, "center" )
+			 0, 95, love.graphics.getWidth(), "center" )
    love.graphics.printf( "---Credits---",
-			 276, 220, 250, "center" )
+			 5, 188, love.graphics.getWidth(), "center" )
+
+   local section_names_y = 235
+   local section_width = 260
    love.graphics.printf( "Code",
-			 10, 265, 260, "center" )
-   love.graphics.setFont( bungee_font_links )
-   buttons_with_url.draw_button( gamecode_button )
-   buttons_with_url.draw_button( love_button )
-   buttons_with_url.draw_button( vector_button )   
-
-   love.graphics.setFont( bungee_font )
-   love.graphics.printf( "Visuals",
-			 270, 265, 260, "center" )
-   love.graphics.setFont( bungee_font_links )
-   buttons_with_url.draw_button( tileset_button )
-   buttons_with_url.draw_button( bungeefont_button )
-
-   love.graphics.setFont( bungee_font )
+			 5, section_names_y, section_width, "center" )
+   love.graphics.printf( "Graphics",
+			 275, section_names_y, section_width, "center" )
    love.graphics.printf( "Sound",
-			 530, 265, 260, "center" )
+			 530, section_names_y, section_width, "center" )
+
    love.graphics.setFont( bungee_font_links )
    love.graphics.printf( "Samples derived from works by",
-			 570, 315, 200, "center" )
-
-   love.graphics.setFont( bungee_font_soundeffects )
-   buttons_with_url.draw_button( cmusounddesign_button )
-   buttons_with_url.draw_button( ngruber_button )
-   buttons_with_url.draw_button( bart_button )
-   buttons_with_url.draw_button( qubodup_button )
-   buttons_with_url.draw_button( tinyworlds_button )
-   buttons_with_url.draw_button( edgardedition_button )
-
-   love.graphics.setFont( bungee_font_links )
-   buttons_with_url.draw_button( music_button )
-   
+			 570, section_start_y, 200, "center" )
    love.graphics.setFont( oldfont )
+   
+   buttons_with_url.draw_layout( code_section )
+   buttons_with_url.draw_layout( graphics_section )
+   buttons_with_url.draw_layout( sound_effects_section )
+   buttons_with_url.draw_button( music_button )
+   buttons_with_url.draw_button( thanks_button )
 end
 
 function gamefinished.keyreleased( key, code )
@@ -168,18 +216,11 @@ function gamefinished.mousereleased( x, y, button, istouch )
    if button == 'r' or button == 2 then
       love.event.quit()
    end
-   buttons_with_url.mousereleased( gamecode_button, x, y, button )
-   buttons_with_url.mousereleased( love_button, x, y, button )
-   buttons_with_url.mousereleased( vector_button, x, y, button )   
-   buttons_with_url.mousereleased( tileset_button, x, y, button )
-   buttons_with_url.mousereleased( bungeefont_button, x, y, button )
-   buttons_with_url.mousereleased( cmusounddesign_button, x, y, button )
-   buttons_with_url.mousereleased( ngruber_button, x, y, button )
-   buttons_with_url.mousereleased( bart_button, x, y, button )
-   buttons_with_url.mousereleased( qubodup_button, x, y, button )
-   buttons_with_url.mousereleased( tinyworlds_button, x, y, button )
-   buttons_with_url.mousereleased( edgardedition_button, x, y, button )
-   buttons_with_url.mousereleased( music_button, x, y, button )
+   buttons_with_url.mousereleased_layout( code_section )
+   buttons_with_url.mousereleased_layout( graphics_section )
+   buttons_with_url.mousereleased_layout( sound_effects_section )
+   buttons_with_url.mousereleased_button( music_button )
+   buttons_with_url.mousereleased_button( thanks_button )
 end
 
 return gamefinished

@@ -1,88 +1,101 @@
 local vector = require "vector"
+local buttons = require "buttons"
 
 local buttons_with_url = {}
 
 function buttons_with_url.new_button( o )
-   return( { position = o.position or vector( 300, 300 ),
-	     width = o.width or 100,	     
-	     height = o.height or 50,
-	     text = o.text or "hello",
-	     url = o.url or nil,
-	     image = o.image or nil,
-	     quad = o.quad or nil,
-	     quad_when_selected = o.quad_when_selected or nil,
-	     selected = false } )
+   btn = buttons.new_button( o )
+   btn.url = o.url or nil
+   btn.font = o.font or love.graphics.getFont()
+   btn.text_align = o.text_align or "center"
+   btn.sizing = o.sizing or nil
+   btn.positioning = o.positioning or nil
+   btn.displacement_from_auto = o.displacement_from_auto or vector(0, 0)
+   return( btn )
 end
 
 function buttons_with_url.update_button( single_button, dt )
-   local mouse_pos = vector( love.mouse.getPosition() )
-   if( buttons_with_url.inside( single_button, mouse_pos ) ) then
-      single_button.selected = true
-   else
-      single_button.selected = false
-   end
+   buttons.update_button( single_button, dt )
 end
 
-
 function buttons_with_url.draw_button( single_button )
-   local text_offset_from_top_border = 5
+   local oldfont = love.graphics.getFont()
+   love.graphics.setFont( single_button.font )
    if single_button.selected then
-      if single_button.image and single_button.quad_when_selected then
-	 love.graphics.draw( single_button.image,
-			     single_button.quad_when_selected, 
-			     single_button.position.x,
-			     single_button.position.y )
-      else
-	 love.graphics.rectangle( 'line',
-	 			  single_button.position.x,
-	 			  single_button.position.y,
-	 			  single_button.width,
-	 			  single_button.height )
-	 local r, g, b, a = love.graphics.getColor()
-	 love.graphics.setColor( 255, 0, 0, 100 )
-	 love.graphics.printf(
-	    single_button.text,
-	    single_button.position.x,
-	    single_button.position.y + text_offset_from_top_border,
-	    single_button.width,
-	    "center" )
-	 love.graphics.setColor( r, g, b, a )
-      end
+      local r, g, b, a = love.graphics.getColor()
+      love.graphics.setColor( 255, 0, 0, 100 )
+      love.graphics.printf( single_button.text,
+			    single_button.position.x,
+			    single_button.position.y,
+			    single_button.width,
+			    single_button.text_align )
+      love.graphics.setColor( r, g, b, a )
    else
-      if single_button.image and single_button.quad then
-	 love.graphics.draw( single_button.image,
-			     single_button.quad, 
-			     single_button.position.x,
-			     single_button.position.y )
-      else
-	 love.graphics.rectangle( 'line',
-	 			  single_button.position.x,
-	 			  single_button.position.y,
-	 			  single_button.width,
-	 			  single_button.height )
-	 love.graphics.printf(
-	    single_button.text,
-	    single_button.position.x,
-	    single_button.position.y + text_offset_from_top_border,
-	    single_button.width,
-	    "center" )
-      end
+      love.graphics.printf( single_button.text,
+			    single_button.position.x,
+			    single_button.position.y,
+			    single_button.width,
+			    single_button.text_align )	 
    end
+   love.graphics.setFont( oldfont )
 end
 
 function buttons_with_url.inside( single_button, pos )
-   return
-      single_button.position.x < pos.x and
-      pos.x < ( single_button.position.x + single_button.width ) and
-      single_button.position.y < pos.y and
-      pos.y < ( single_button.position.y + single_button.height )
+   buttons.inside( single_button, pos )
 end
 
-function buttons_with_url.mousereleased( single_button, x, y, button )
+function buttons_with_url.mousereleased_button( single_button, x, y, button )
    if single_button.selected then
       local status = love.system.openURL( single_button.url )
+   end      
+   return single_button.selected
+end
+
+
+function buttons_with_url.new_layout( o )
+   return( { position = o.position or vector( 300, 300 ),
+	     default_width = o.default_width or 100,
+	     default_height = o.default_height or 50,
+	     default_offset = o.default_offset or vector( 10, 10 ),
+	     orientation = o.orientation or "vertical",
+	     children = o.children or {} } )
+end
+
+function buttons_with_url.add_to_layout( layout, element )
+   if element.positioning and element.positioning == 'auto' then
+      local position = layout.position
+      for i, el in ipairs( layout.children ) do
+	 if layout.orientation == "vertical" then
+	    position = position + vector( 0, el.height ) + layout.default_offset
+	 else
+	    print( "unknown layout orientation" )
+	 end
+      end
+      element.position = position + element.displacement_from_auto
    end
-   return single_button.selected 
+   if element.sizing and element.sizing == 'auto' then
+      element.width = layout.default_width
+      element.height = layout.default_height
+   end
+   table.insert( layout.children, element )
+end
+
+function buttons_with_url.update_layout( layout, dt )
+   for _, btn in pairs( layout.children ) do
+      buttons_with_url.update_button( btn, dt )
+   end
+end
+
+function buttons_with_url.draw_layout( layout )
+   for _, btn in pairs( layout.children ) do
+      buttons_with_url.draw_button( btn )
+   end
+end
+
+function buttons_with_url.mousereleased_layout( layout, x, y, button )
+   for _, btn in pairs( layout.children ) do
+      buttons_with_url.mousereleased_button( btn, x, y, button )
+   end
 end
 
 return buttons_with_url
