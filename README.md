@@ -91,9 +91,9 @@ Contents:
 &nbsp;&nbsp;&nbsp; Appendix C-2: Chapter 2 Using Classes.  
 
 <!-- -->
- **Chapter 3: Details**
+ **Chapter 3 (optional): Details**
 
-1. [Better Ball Rebounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Better-Ball-Rebounds)
+1. [Improved Ball Rebounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Improved-Ball-Rebounds)
 2. [Ball Launch From Platform (Two Objects Moving Together)](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform)
 3. [Mouse Controls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Mouse-Controls)
 4. [Spawning Bonuses](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spawning-Bonuses)
@@ -106,15 +106,15 @@ Contents:
 11. [Wall Tiles](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles)
 12. [Side Panel](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Side-Panel)  
 13. [Score](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Score)
-14. Fonts ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Fonts))
-15. More Sounds ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/More-Sounds))
-16. Final Screen ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen))
-17. Packaging and Distribution ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution))
+14. [Fonts](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Fonts)
+15. [More Sounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/More-Sounds)
+16. [Final Screen](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Final-Screen)
+17. [Packaging](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging)
 
 <!-- -->
 **Additional Topics:**
 
-1. Spreading the Word ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Spreading-the-Word))  
+1. Minimal Marketing ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Minimal-Marketing))  
 2. Finding a Team 
 
 [Acknowledgements](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Acknowledgements)  
