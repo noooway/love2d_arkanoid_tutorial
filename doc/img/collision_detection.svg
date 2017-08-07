@@ -98,9 +98,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="381.62474"
-     inkscape:cy="561.11379"
+     inkscape:zoom="0.7"
+     inkscape:cx="303.72187"
+     inkscape:cy="360.53334"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -111,8 +111,9 @@
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:object-nodes="false"
-     inkscape:snap-nodes="false"
-     inkscape:snap-global="false" />
+     inkscape:snap-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:snap-midpoints="true" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -131,10 +132,10 @@
      id="layer1"
      transform="translate(0,-352.36218)">
     <path
-       style="fill:none;stroke:#ff6600;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 117.54174,466.98645 42.74378,0"
-       id="path5065"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       id="path5089"
+       d="m 66.412755,466.98645 47.986465,0"
+       style="fill:none;stroke:#ff6600;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <g
        id="g3773"
        transform="translate(39.142857,-150)">
@@ -186,8 +187,8 @@
     <path
        inkscape:connector-curvature="0"
        id="path5077"
-       d="m 504.39922,488.91964 0,-21.93319"
-       style="fill:none;stroke:#ff6600;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       d="m 504.39922,466.98643 0,-23.41538"
+       style="fill:none;stroke:#ff6600;stroke-width:0.99999982px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <g
        id="g3781"
        transform="translate(199.14286,-150)">
@@ -476,50 +477,50 @@
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
-       x="167.15028"
-       y="462.52805"
+       x="15.721712"
+       y="509.6709"
        id="text5067"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5069"
-         x="167.15028"
-         y="462.52805"
+         x="15.721712"
+         y="509.6709"
          style="font-size:16px;fill:#ff6600">A.width / 2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5073"
-       y="567.29474"
+       y="573.35565"
        x="85.004166"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:16px;fill:#ff6600"
-         y="567.29474"
+         y="573.35565"
          x="85.004166"
          id="tspan5075"
          sodipodi:role="line">B.width / 2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5079"
-       y="506.30457"
-       x="432.73459"
+       y="433.7814"
+       x="507.09048"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:16px;fill:#ff6600"
-         y="506.30457"
-         x="432.73459"
+         y="433.7814"
+         x="507.09048"
          id="tspan5081"
          sodipodi:role="line">A.height / 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
-       x="556.99872"
-       y="506.07303"
+       x="570.87347"
+       y="501.30759"
        id="text5085"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5087"
-         x="556.99872"
-         y="506.07303"
+         x="570.87347"
+         y="501.30759"
          style="font-size:16px;fill:#ff6600">B.height / 2</tspan></text>
   </g>
 </svg>
