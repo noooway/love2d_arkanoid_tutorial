@@ -98,9 +98,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="325.90196"
-     inkscape:cy="407.47682"
+     inkscape:zoom="0.7"
+     inkscape:cx="183.552"
+     inkscape:cy="383.6686"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -128,6 +128,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-352.36218)">
+    <path
+       style="fill:none;stroke:#ff6600;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 117.54174,466.98645 42.74378,0"
+       id="path5065"
+       inkscape:connector-curvature="0" />
     <g
        id="g3773"
        transform="translate(39.142857,-150)">
@@ -149,6 +154,11 @@
          style="fill:#000000;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
          sodipodi:type="arc" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5071"
+       d="m 177.82311,551.33417 38.76396,0"
+       style="fill:none;stroke:#ff6600;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <g
        id="g3777"
        transform="translate(23.142857,-150)">
@@ -171,6 +181,11 @@
          d="m 79.560664,64.624268 c 0,2.377199 -1.927101,4.3043 -4.304301,4.3043 -2.3772,0 -4.304301,-1.927101 -4.304301,-4.3043 0,-2.3772 1.927101,-4.304301 4.304301,-4.304301 2.3772,0 4.304301,1.927101 4.304301,4.304301 z"
          transform="translate(118.18784,636.70991)" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5077"
+       d="m 504.39922,488.91964 0,-21.93319"
+       style="fill:none;stroke:#ff6600;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <g
        id="g3781"
        transform="translate(199.14286,-150)">
@@ -192,6 +207,11 @@
          d="m 79.560664,64.624268 c 0,2.377199 -1.927101,4.3043 -4.304301,4.3043 -2.3772,0 -4.304301,-1.927101 -4.304301,-4.3043 0,-2.3772 1.927101,-4.304301 4.304301,-4.304301 2.3772,0 4.304301,1.927101 4.304301,4.304301 z"
          transform="translate(230,552.36218)" />
     </g>
+    <path
+       style="fill:none;stroke:#ff6600;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 570.58706,551.33414 0,-38.11826"
+       id="path5083"
+       inkscape:connector-curvature="0" />
     <g
        id="g3785"
        transform="translate(147.14286,-150)">
@@ -451,5 +471,53 @@
          x="360.85718"
          id="tspan5044"
          sodipodi:role="line">dist_y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
+       x="130.36458"
+       y="480.74234"
+       id="text5067"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5069"
+         x="130.36458"
+         y="480.74234"
+         style="font-size:12px;fill:#ff6600">A.width / 2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5073"
+       y="566.22333"
+       x="108.78988"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;fill:#ff6600"
+         y="566.22333"
+         x="108.78988"
+         id="tspan5075"
+         sodipodi:role="line">B.width / 2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5079"
+       y="503.35962"
+       x="446.09775"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;fill:#ff6600"
+         y="503.35962"
+         x="446.09775"
+         id="tspan5081"
+         sodipodi:role="line">A.height / 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
+       x="546.05487"
+       y="506.07303"
+       id="text5085"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5087"
+         x="546.05487"
+         y="506.07303"
+         style="font-size:12px;fill:#ff6600">B.height / 2</tspan></text>
   </g>
 </svg>
