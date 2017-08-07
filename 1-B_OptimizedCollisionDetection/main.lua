@@ -5,8 +5,8 @@ ball.position_y = 500
 ball.speed_x = 700
 ball.speed_y = 700
 ball.radius = 10
-ball.halfwidth = ball.radius
-ball.halfheight = ball.radius
+ball.width = 2 * ball.radius
+ball.height = 2 * ball.radius
 
 
 function ball.update( dt )
@@ -54,8 +54,6 @@ platform.position_y = 500
 platform.speed_x = 500
 platform.width = 70
 platform.height = 20
-platform.halfwidth = platform.width / 2
-platform.halfheight = platform.height / 2
 
 function platform.update( dt )
    if love.keyboard.isDown("right") then
@@ -68,8 +66,8 @@ end
 
 function platform.draw()
    love.graphics.rectangle( 'line',
-			    platform.position_x - platform.halfwidth,
-			    platform.position_y - platform.halfheight,
+			    platform.position_x - platform.width / 2,
+			    platform.position_y - platform.height / 2,
 			    platform.width,
 			    platform.height )   
 end
@@ -95,9 +93,7 @@ function bricks.new_brick( position_x, position_y, width, height )
    return( { position_x = position_x,
 	     position_y = position_y,
 	     width = width or bricks.brick_width,
-	     height = height or bricks.brick_height,
-	     halfwidth = ( width or bricks.brick_width ) / 2,
-	     halfheight = ( height or bricks.brick_height ) / 2 } )
+	     height = height or bricks.brick_height } )
 end
 
 function bricks.update_brick( single_brick )   
@@ -105,8 +101,8 @@ end
 
 function bricks.draw_brick( single_brick )
    love.graphics.rectangle( 'line',
-			    single_brick.position_x - single_brick.halfwidth,
-			    single_brick.position_y - single_brick.halfheight,
+			    single_brick.position_x - single_brick.width / 2,
+			    single_brick.position_y - single_brick.height / 2,
 			    single_brick.width,
 			    single_brick.height )   
 end
@@ -159,9 +155,7 @@ function walls.new_wall( position_x, position_y, width, height )
    return( { position_x = position_x,
 	     position_y = position_y,
 	     width = width,
-	     height = height,
-             halfwidth = width / 2,
-	     halfheight = height / 2 } )
+	     height = height } )
 end
 
 function walls.update_wall( single_wall )
@@ -169,8 +163,8 @@ end
 
 function walls.draw_wall( single_wall )
    love.graphics.rectangle( 'line',
-			    single_wall.position_x - single_wall.halfwidth,
-			    single_wall.position_y - single_wall.halfheight,
+			    single_wall.position_x - single_wall.width / 2,
+			    single_wall.position_y - single_wall.height / 2,
 			    single_wall.width,
 			    single_wall.height )
 end
@@ -230,19 +224,19 @@ function collisions.resolve_collisions()
 end
 
 function collisions.check_rectangles_overlap( a, b )
-   local overlap = false
-   local shift_b_x, shift_b_y = 0, 0
-   local dist_x = b.position_x - a.position_x
-   local dist_y = b.position_y - a.position_y
-   if math.abs( dist_x ) <= a.halfwidth + b.halfwidth and
-      math.abs( dist_y ) <= a.halfheight + b.halfheight then
-	 overlap = true
-	 shift_b_x = dist_x / math.abs(dist_x) * (
-	    ( a.halfwidth + b.halfwidth ) - math.abs(dist_x) )
-	 shift_b_y = dist_y / math.abs(dist_y) * (
-	    ( a.halfheight + b.halfheight ) - math.abs(dist_y) )
-   end
-   return overlap, shift_b_x, shift_b_y
+   local x_overlap, x_shift = overlap_along_axis( a.position_x, b.position_x,
+						  a.width, b.width )
+   local y_overlap, y_shift = overlap_along_axis( a.position_y, b.position_y,
+						  a.height, b.height )
+   local overlap = x_overlap > 0 and y_overlap > 0
+   return overlap, x_shift, y_shift
+end
+
+local function overlap_along_axis( a_pos, b_pos, a_size, b_size )
+   local diff = b_pos - a_pos
+   local dist = math.abs( diff )
+   local overlap = ( a_size + b_size ) / 2 - dist
+   return overlap, diff / dist * overlap
 end
 
 function collisions.ball_platform_collision( ball, platform )
