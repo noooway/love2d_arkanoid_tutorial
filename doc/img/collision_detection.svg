@@ -98,9 +98,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="183.552"
-     inkscape:cy="383.6686"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="381.62474"
+     inkscape:cy="561.11379"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -110,7 +110,9 @@
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
-     inkscape:object-nodes="true" />
+     inkscape:object-nodes="false"
+     inkscape:snap-nodes="false"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -474,50 +476,50 @@
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
-       x="130.36458"
-       y="480.74234"
+       x="167.15028"
+       y="462.52805"
        id="text5067"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5069"
-         x="130.36458"
-         y="480.74234"
-         style="font-size:12px;fill:#ff6600">A.width / 2</tspan></text>
+         x="167.15028"
+         y="462.52805"
+         style="font-size:16px;fill:#ff6600">A.width / 2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5073"
-       y="566.22333"
-       x="108.78988"
+       y="567.29474"
+       x="85.004166"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         style="font-size:12px;fill:#ff6600"
-         y="566.22333"
-         x="108.78988"
+         style="font-size:16px;fill:#ff6600"
+         y="567.29474"
+         x="85.004166"
          id="tspan5075"
          sodipodi:role="line">B.width / 2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5079"
-       y="503.35962"
-       x="446.09775"
+       y="506.30457"
+       x="432.73459"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         style="font-size:12px;fill:#ff6600"
-         y="503.35962"
-         x="446.09775"
+         style="font-size:16px;fill:#ff6600"
+         y="506.30457"
+         x="432.73459"
          id="tspan5081"
          sodipodi:role="line">A.height / 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff6600;fill-opacity:1;stroke:none;font-family:Sans"
-       x="546.05487"
+       x="556.99872"
        y="506.07303"
        id="text5085"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5087"
-         x="546.05487"
+         x="556.99872"
          y="506.07303"
-         style="font-size:12px;fill:#ff6600">B.height / 2</tspan></text>
+         style="font-size:16px;fill:#ff6600">B.height / 2</tspan></text>
   </g>
 </svg>
