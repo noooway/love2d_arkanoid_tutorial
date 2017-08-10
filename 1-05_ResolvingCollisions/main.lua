@@ -88,6 +88,10 @@ function bricks.new_brick( position_x, position_y, width, height )
 	     height = height or bricks.brick_height } )
 end
 
+function bricks.add_to_current_level_bricks( brick )
+   table.insert( bricks.current_level_bricks, brick )
+end
+
 function bricks.update_brick( single_brick )   
 end
 
@@ -110,7 +114,7 @@ function bricks.construct_level()
 	    ( bricks.brick_height + bricks.vertical_distance )
 	 local new_brick = bricks.new_brick( new_brick_position_x,
 					     new_brick_position_y )
-	 table.insert( bricks.current_level_bricks, new_brick )
+	 bricks.add_to_current_level_bricks( new_brick )
       end      
    end   
 end

@@ -18,6 +18,10 @@ function bricks.new_brick( position, width, height, bricktype )
 	     bricktype = bricktype } )
 end
 
+function bricks.add_to_current_level_bricks( brick )
+   table.insert( bricks.current_level_bricks, brick )
+end
+
 function bricks.update_brick( single_brick )   
 end
 
@@ -60,7 +64,7 @@ function bricks.construct_level( level_bricks_arrangement )
 						bricks.brick_width,
 						bricks.brick_height,
 						bricktype )
-	    table.insert( bricks.current_level_bricks, new_brick )
+	    bricks.add_to_current_level_bricks( new_brick )
 	 end
       end
    end
