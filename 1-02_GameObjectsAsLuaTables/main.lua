@@ -89,20 +89,15 @@ end
 
 function love.load()   
    bricks.add_to_current_level_bricks(
-      bricks.new_brick( 100, 100,
-			bricks.brick_width, bricks.brick_height ))
+      bricks.new_brick( 100, 100 ))
    bricks.add_to_current_level_bricks(
-      bricks.new_brick( 160, 100,
-			bricks.brick_width, bricks.brick_height ))
+      bricks.new_brick( 160, 100 ))
    bricks.add_to_current_level_bricks(
-      bricks.new_brick( 220, 100,
-			bricks.brick_width, bricks.brick_height ))   
+      bricks.new_brick( 220, 100 ))   
    bricks.add_to_current_level_bricks(
-      bricks.new_brick( 280, 145,
-			bricks.brick_width, bricks.brick_height ))   
+      bricks.new_brick( 280, 145 ))   
    bricks.add_to_current_level_bricks(
-      bricks.new_brick( 340, 145,
-			bricks.brick_width, bricks.brick_height ))   
+      bricks.new_brick( 340, 145 ))   
 end
  
 function love.update( dt )
