@@ -46,7 +46,6 @@ function platform.draw()
 			    platform.height )   
 end
 
-
 -- Bricks
 local bricks = {}
 bricks.rows = 8
@@ -64,6 +63,10 @@ function bricks.new_brick( position_x, position_y, width, height )
 	     position_y = position_y,
 	     width = width or bricks.brick_width,
 	     height = height or bricks.brick_height } )
+end
+
+function bricks.add_to_current_level_bricks( brick )
+   table.insert( bricks.current_level_bricks, brick )
 end
 
 function bricks.update_brick( single_brick )   
@@ -88,7 +91,7 @@ function bricks.construct_level()
 	    ( bricks.brick_height + bricks.vertical_distance )
 	 local new_brick = bricks.new_brick( new_brick_position_x,
 					     new_brick_position_y )
-	 table.insert( bricks.current_level_bricks, new_brick )
+	 bricks.add_to_current_level_bricks( new_brick )
       end      
    end   
 end
@@ -173,88 +176,6 @@ function walls.draw()
 end
 
 
--- Collisions
-local collisions = {}
-
-function collisions.resolve_collisions()
-   collisions.ball_platform_collision( ball, platform )
-   collisions.ball_walls_collision( ball, walls )
-   collisions.ball_bricks_collision( ball, bricks )
-   collisions.platform_walls_collision( platform, walls )
-end
-
-function collisions.check_rectangles_overlap( a, b )
-   local overlap = false
-   if not( a.x + a.width < b.x  or b.x + b.width < a.x  or
-	   a.y + a.height < b.y or b.y + b.height < a.y ) then
-      overlap = true
-   end
-   return overlap
-end
-
-function collisions.ball_platform_collision( ball, platform )
-   local a = { x = platform.position_x,
-	       y = platform.position_y,
-	       width = platform.width,
-	       height = platform.height }
-   local b = { x = ball.position_x - ball.radius,
-	       y = ball.position_y - ball.radius,
-	       width = 2 * ball.radius,
-	       height = 2 * ball.radius }
-   if collisions.check_rectangles_overlap( a, b ) then
-      print( "ball-platform collision" )
-   end      
-end
-
-function collisions.ball_walls_collision( ball, walls )
-   local b = { x = ball.position_x - ball.radius,
-	       y = ball.position_y - ball.radius,
-	       width = 2 * ball.radius,
-	       height = 2 * ball.radius }
-   for _, wall in pairs( walls.current_level_walls ) do
-      local a = { x = wall.position_x,
-		  y = wall.position_y,
-		  width = wall.width,
-		  height = wall.height }            	 
-      if collisions.check_rectangles_overlap( a, b ) then
-	 print( "ball-wall collision" )
-      end
-   end
-end
-
-function collisions.ball_bricks_collision( ball, bricks )
-   local b = { x = ball.position_x - ball.radius,
-	       y = ball.position_y - ball.radius,
-	       width = 2 * ball.radius,
-	       height = 2 * ball.radius }
-   for i, brick in pairs( bricks.current_level_bricks ) do   
-      local a = { x = brick.position_x,
-		  y = brick.position_y,
-		  width = brick.width,
-		  height = brick.height }
-      if collisions.check_rectangles_overlap( a, b ) then
-	 print( "ball-brick collision" )
-      end
-   end
-end
-
-function collisions.platform_walls_collision()
-   local b = { x = platform.position_x,
-	       y = platform.position_y,
-	       width = platform.width,
-	       height = platform.height }
-   for _, wall in pairs( walls.current_level_walls ) do
-      local a = { x = wall.position_x,
-		  y = wall.position_y,
-		  width = wall.width,
-		  height = wall.height }      
-      if collisions.check_rectangles_overlap( a, b ) then
-	 print( "platform-wall collision" )
-      end
-   end
-end
-
-
 function love.load()
    bricks.construct_level()
    walls.construct_walls()
@@ -265,7 +186,6 @@ function love.update( dt )
    platform.update( dt )
    bricks.update( dt )
    walls.update( dt )
-   collisions.resolve_collisions()
 end
  
 function love.draw()
@@ -273,12 +193,6 @@ function love.draw()
    platform.draw()
    bricks.draw()
    walls.draw()
-end
-
-function love.keyreleased( key, code )
-   if  key == 'escape' then
-      love.event.quit()
-   end    
 end
 
 function love.quit()

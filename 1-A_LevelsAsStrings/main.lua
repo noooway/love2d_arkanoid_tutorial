@@ -93,6 +93,10 @@ function bricks.new_brick( position_x, position_y, width, height )
 	     height = height or bricks.brick_height } )
 end
 
+function bricks.add_to_current_level_bricks( brick )
+   table.insert( bricks.current_level_bricks, brick )
+end
+
 function bricks.update_brick( single_brick )   
 end
 
@@ -109,11 +113,9 @@ function bricks.construct_level( level_bricks_arrangement )
    local row_index = 0
    for row in level_bricks_arrangement:gmatch( '(.-)\n' ) do
       row_index = row_index + 1
-      --print( "row", row_index, row )
       local col_index = 0
       for bricktype in row:gmatch('.') do
 	 col_index = col_index + 1
-	 --print( "col", col_index, bricktype )
 	 if bricktype == '#' then
 	    local new_brick_position_x = bricks.top_left_position_x +
 	       ( col_index - 1 ) *
@@ -123,7 +125,7 @@ function bricks.construct_level( level_bricks_arrangement )
 	       ( bricks.brick_height + bricks.vertical_distance )
 	    local new_brick = bricks.new_brick( new_brick_position_x,
 						new_brick_position_y )
-	    table.insert( bricks.current_level_bricks, new_brick )
+	    bricks.add_to_current_level_bricks( new_brick )
 	 end
       end
    end
