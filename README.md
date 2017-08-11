@@ -3,12 +3,12 @@ This tutorial describes how to write a more or less full-featured [Arkanoid](htt
 Here are several screenshots from various stages of the development process:
 <p align="center">
 <a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/The-Ball,-The-Brick,-The-Platform"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/1-01.png" width="300"/></a>
-<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/1-05.png" width="300"/></a>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/1-06.png" width="300"/></a>
 <br>
 <a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Add-New-Ball-Bonus"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-07.png" width="300"/></a>
 <a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Wall-Tiles"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-11.png" width="300"/></a>
 <br>
-<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging-and-Distribution"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-17.png" width="300"/></a>
+<a href="https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Packaging"><img src="https://github.com/noooway/love2d_arkanoid_tutorial/blob/master/doc/img/3-17.png" width="300"/></a>
 </p>
 
 The intended audience are people, who have basic programming experience, but have
@@ -28,7 +28,6 @@ is to fill it with the details.
 **Chapter 3** proceeds to add functionality to achieve a full-featured game. 
 While the first two chapters are rather general, material in this chapter is mostly 
 specific for Arkanoid-type games.
-*Warning: the code for this chapter is in a working state, but requires some minor corrections.*
 
 **Appendices** - which are not written yet :) - demonstrate some additional topics, such as how to use environments to 
 define Lua modules, classes, and so on.
@@ -66,13 +65,14 @@ Contents:
 **Chapter 1: Prototype**  
 
 1. [The Ball, The Brick, The Platform](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/The-Ball,-The-Brick,-The-Platform)
-2. [Bricks and Walls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bricks-and-Walls)
-3. [Detecting Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Detecting-Collisions)
-4. [Resolving Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Resolving-Collisions)
-5. [Levels](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels)
+2. [Game Objects as Lua Tables](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Game-Objects-as-Lua-Tables)
+3. [Bricks and Walls](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Bricks-and-Walls)
+4. [Detecting Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Detecting-Collisions)
+5. [Resolving Collisions](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Resolving-Collisions)
+6. [Levels](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Levels)  
 
 &nbsp;&nbsp;&nbsp; Appendix A: [Storing Levels as Strings](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Storing-Levels-as-Strings)  
-
+&nbsp;&nbsp;&nbsp; Appendix B: Optimized Collision Detection ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Optimized-Collision-Detection))
 <!-- -->
 
 **Chapter 2: General Code Structure**  
