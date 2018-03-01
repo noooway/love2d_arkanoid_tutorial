@@ -91,7 +91,7 @@ Contents:
 &nbsp;&nbsp;&nbsp; Appendix C-2: Chapter 2 Using Classes.  
 
 <!-- -->
- **Chapter 3 (optional): Details**
+ **Chapter 3 (deprecated): Details**
 
 1. [Improved Ball Rebounds](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Improved-Ball-Rebounds)
 2. [Ball Launch From Platform (Two Objects Moving Together)](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Ball-Launch-From-Platform)
@@ -114,8 +114,9 @@ Contents:
 <!-- -->
 **Additional Topics:**
 
-1. Minimal Marketing ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Minimal-Marketing))  
-2. Finding a Team 
+1. Game Design
+2. Minimal Marketing ([draft](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Minimal-Marketing))  
+3. Finding a Team 
 
 [Acknowledgements](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Acknowledgements)  
 [Archive](https://github.com/noooway/love2d_arkanoid_tutorial/wiki/Archive)  
